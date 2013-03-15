@@ -19,9 +19,27 @@ $(function() {
         model: model
       });
       indexView.render();
+
       $('.container').append(indexView.el);
 
+    $.getJSON('http://localhost:8000/tvs.json',null,function(data) {
 
 
+
+        // Items view
+        var imodel = new Backbone.Model({items:data});
+        var itemsView = new Application.View({
+            template: Handlebars.templates['items'],
+            model: imodel
+        });
+        itemsView.render();
+        $('.items').append(itemsView.el);
+
+
+
+
+
+
+    });
 
 });

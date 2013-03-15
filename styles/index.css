@@ -101,19 +101,33 @@
 
 }
 
-.tvfitems{
+.hero img.first{
+    bottom:5px;
+    left:70px;
+}
+
+.hero img.second{
+    bottom:0;
+    left:298px;
+}
+.hero img.third{
+    bottom:0;
+    left:569px;
+}
+
+.items{
     text-align: center;
 }
-.tvfitems ul {
+.items ul {
     margin-left:30px;
 }
-.tvfitems li{
+.items li{
     margin-right:20px;
     padding:0;
     width:206px;
 }
 
-.tvfitems .title{
+.items .title{
     display: block;
     color: #555;
     font-size: 12px;
@@ -126,7 +140,7 @@
     text-overflow: ellipsis;
 }
 
-.tvfitems .price{
+.items .price{
     display: block;
     color: #000;
     font-size: 16px;
@@ -138,7 +152,7 @@
     width: 200px;
 }
 
-.filter{
+.filters{
     border-bottom:1px solid #EEE;
     margin-bottom:20px;
 }
@@ -200,7 +214,7 @@
 
 .footer {
     position:relative; padding:60px 0px; margin:20px 0px;
-    background:#0e77bd url(images/centre.png) no-repeat right bottom;
+    background:#0e77bd ;
 }
 
 .footer .logo .text {
@@ -278,33 +292,33 @@
 }
 
 
-.tvfAction .slider .ui-slider {
+.filters .slider .ui-slider {
     background: url(../images/bg-slider.png) 0px 0px repeat-x;
     -moz-border-radius: 15px; -webkit-border-radius: 15px; -o-border-radius: 15px; -ms-border-radius: 15px; border-radius: 15px;
 }
-.tvfAction .slider .ui-slider-horizontal {
+.filters .slider .ui-slider-horizontal {
     height: 0.7em;
 }
-.tvfAction .slider .ui-slider-range {
+.filters .slider .ui-slider-range {
     background: url(../imgages/bg-slider.png) 0px -12px repeat-x;
 }
 
-.tvfAction .slider .ui-slider-handle {
+.filters .slider .ui-slider-handle {
     background: url(../images/bg-slider-handle.png); width: 15px; height: 29px;
     border: none; top: -0.7em;
 }
 
-.tvfAction .slider .ui-slider-handle:after {
+.filters .slider .ui-slider-handle:after {
     position: absolute; background: url(../images/slider-tip.png) no-repeat; top: -50px; left: -24px;
     content: attr(data-value) "\""; width: 63px; text-align: center; padding: 13px 0px 21px 0px;
     display: block; font-size: 1.7em; font-weight: bold; letter-spacing: -1px; color: #333;
     text-shadow: 0px 1px 0px #fff; font-family: "Custom";
 }
 
-.tvfAction .slider span {
+.filters .slider span {
     display: block; font-size: 1.4em; margin-bottom: 30px; font-weight: bold; margin-top: 14px;
 }
-.tvfAction .slider a{
+.filters .slider a{
     text-decoration: none;
 }
 
