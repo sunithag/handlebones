@@ -9,13 +9,19 @@ Application.View = Backbone.View.extend({
 });
 
 $(function() {
-  var model = new Backbone.Model({
-    greeting: 'Hello'
-  });
-  var indexView = new Application.View({
-    template: Handlebars.templates['index'],
-    model: model
-  });
-  indexView.render();
-  $('body').append(indexView.el);
+
+
+      var model = new Backbone.Model({
+        greeting: 'Hello'
+      });
+      var indexView = new Application.View({
+        template: Handlebars.templates['index'],
+        model: model
+      });
+      indexView.render();
+      $('.container').append(indexView.el);
+
+
+
+
 });
