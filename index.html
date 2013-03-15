@@ -24,12 +24,58 @@
       <span> > </span><a href="http://www.walmart.com/cp/Electronics/3944">Electronics</a>
        <span> > </span><a class="last" href="http://www.walmart.com/cp/1060825">TV'S</a>
   </nav>
-   <article class="hero" >
+   <div class="hero" >
       <h2>Get More, For Less</h2>
       <p>Find the perfect Television with our new <span style="color:#0e79be;">TVFinder<sup>TM</sup></span></p>
       <div> <img src="images/hero.png" /> </div>
-   </article>
-   <footer class="footer">
+   </div>
+   <div class="filters clearfix">
+      <ul class="nav nav-pills pull-right">
+        <li ><label>Type</label>
+        <select id = "typeList">
+            <option value = "All">All</option>
+            <option value = "LCD">LCD</option>
+            <option value = "LED-LCD">LED-LCD</option>
+             <option value = "Plasma">Plasma</option>
+        </select></li>
+        <li><label>Brand</label>
+          <select id = "brandList">
+             <option value = "All">All</option>
+             <option value = "2">Samsung</option>
+             <option value = "3">VIZIO </option>
+             <option value = "4">RCA</option>
+             <option value = "5">Sceptre</option>
+             <option value = "6">Element</option>
+             <option value = "7">HANNspree</option>
+             <option value = "8">Proscan</option>
+             <option value = "9">Sony </option>
+             <option value = "10">Emerson</option>
+          </select></li>
+        <li ><label>Sort</label>
+        <select id = "sortList">
+              <option value = "1">Default</option>
+              <option value = "2">Price highest</option>
+              <option value = "3">Size</option>
+              <option value = "4">Brand</option>
+        </select> </li>
+      </ul>
+      <ul class="nav nav-pills pull-left">
+        <li style="margin-top:10px"><i class="sprite-logoicon"></i><div class="logo">TVFinder<sup>TM</sup></div></li>
+        <li style="margin-left:20px"><div class="slider"><span>Size</span><div id="size-slider"></div></div></li>
+      </ul>
+      </div>
+      <div class="summary">
+          <div class="clearfix" >
+                 <span class="clear">
+                        <input type="button" id="clear_filters" value="Clear Filters" style="border-radius:5px;background-color:white;" >
+                 </span>
+                 <span class="results">
+                    <span id="count"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA
+                 </span>
+          </div>
+      </div>
+
+      <footer class="footer">
       <div class="signup">
          <form name="email" method="get" action="#">
              <i class="sprite-walmartfooterlogo" style="float:left"></i>
