@@ -55,7 +55,7 @@
     font-size:18px;
     background: transparent url(../images/spyglass.png) no-repeat 0 center;
 }
-.tvfbc{
+.bc{
     background: #fff;
     display: block;
     padding: 0px 24px;
@@ -63,12 +63,12 @@
     line-height: 1em;
 }
 
-.tvfbc span {
+.bc span {
     margin:0 15px;
     color:#EEE;
 }
 
-.tvfbv img{
+.bc img{
     margin-top:-5px;
 }
 
