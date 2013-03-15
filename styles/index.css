@@ -138,15 +138,15 @@
     width: 200px;
 }
 
-.tvfAction{
+.filter{
     border-bottom:1px solid #EEE;
     margin-bottom:20px;
 }
-.tvfAction ul{
+.filters ul{
   margin-left:20px;
 }
 
-.tvfAction li{
+.filters li{
     padding-right:20px;
     text-align:left;
     font-family:Arial;
@@ -154,7 +154,7 @@
     color:#666;
 }
 
-.tvfAction select {
+.filters select {
     width:140px;
     display:block;
     margin-top:10px;
@@ -162,20 +162,20 @@
 
 }
 
-.tvfAction .logo{
+.filters .logo{
     color:#0e79be;
 }
 
-.tvfsummary .clear{
+.summary .clear{
     float:right;
     margin-right:20px;
 }
-.tvfsummary .results{
+.summary .results{
     float:left;
     margin-left:20px;
 }
 
-.tvfsummary .results span{
+.summary .results span{
     font-weight:bold;
 }
 
