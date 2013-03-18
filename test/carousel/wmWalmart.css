@@ -1,0 +1,195 @@
+/*
+ * Author: Dave Quintana 
+ * Walmart style guide 
+ *
+*/
+body {
+  margin: 0;
+  font: normal 12px/18px Verdana, Arial, Helvetica, Sans-Serif;
+  color: #333333;
+  background-color: #ffffff;
+  position:relative;
+}
+
+a {
+  color: #1a75cf;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff6633;
+  text-decoration: underline;
+}
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+/* remove this comment when integration begins 
+a:visited {
+	color:#666;
+}
+*/
+
+p {
+  margin: 0 0 9px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font: bold 12px Verdana, Arial, Helvetica, Sans-Serif;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  font-weight: normal;
+}
+
+.page-header {
+  padding-bottom: 17px;
+  margin: 18px 0;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.page-header h1 {
+  line-height: 1;
+}
+.section-title {
+	font:bold 16px Arial, Helvetica, Sans-Serif;
+	color:#333;
+}
+.section-title.reverse {
+	color:#fff;
+}
+.disclaimer,
+.fine-print {
+	font:normal 10px Verdana, Arial, Helvetica, Sans-Serif;
+	color:#666;
+}
+.disclaimer.small {
+	font-size:9px;
+}
+.price {
+	color:#cc0000;
+}
+.dark-blue {
+	color:#003399;
+}
+.primary-blue {
+	color:#1a75cf;
+}
+.light-blue {
+	color:#6cabe7;
+}
+.dark-blue.secondary {
+	color:#0769cd;
+}
+.primay-blue.secondary {
+	color:#cbdffa;
+}
+.light-blue.secondary {
+	color:#eff4fa;
+}
+.white {
+	color:#fff;
+}
+.highlight {
+	color:#ff6633;
+}
+.bright-wmOrange {
+	color:#fdba31;
+}
+/* typeahead start */
+
+.yui-ac .yui-ac-container{
+ position:absolute;
+ z-index:9;
+ width:355px;
+ top:3.5em;
+}
+.yui-ac .yui-ac-container-search{
+ width:176px;
+}
+.yui-ac .yui-ac-content{
+ border:1px solid #BBB;
+}
+.yui-ac-hd{
+ text-align:right;
+ font:normal 9px Verdana, Arial, Helvetica, Sans-serif;
+ color:#828282;
+ padding:0 5px;
+}
+.yui-ac-bd{
+ font:normal 11px Verdana, Arial, Helvetica, Sans-Serif;
+ color:#039;
+ padding:0;
+}
+.yui-ac-highlight{
+ color:#FFF;
+}
+/* typeahead end */
+/* jquery typeahead start */
+.jqcustom-ac{
+ position:absolute;
+ z-index:11;
+}
+.jqcustom-ac .jqcustom-ac-container{
+ position:absolute;
+ z-index:9;
+ width:355px;
+ top:3.5em;
+}
+.jqcustom-ac .jqcustom-ac-container-search{
+ width:176px;
+}
+.jqcustom-ac .jqcustom-ac-content{
+ border:1px solid #BBB;
+}
+.jqcustom-ac-hd{
+ text-align:right;
+ font:normal 9px Verdana, Arial, Helvetica, Sans-Serif;
+ color:#828282;
+ padding:0 5px;
+}
+.jqcustom-ac-bd{
+ font:normal 11px Verdana, Arial, Helvetica, Sans-Serif;
+ color:#039;
+ padding:0;
+}
+.jqcustom-ac-highlight{
+ color:#FFF;
+}
+.ui-autocomplete li.ui-menu-item a{
+	font-weight:normal;
+	color:#999;
+}
+.ui-menu .ui-menu-item a b {
+	color:#333333;
+}
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-hover b,
+.ui-menu .ui-menu-item a.ui-state-active,
+.ui-menu .ui-menu-item a.ui-state-active b {
+	font:bold 16px/18px Arial, Helvetica, Sans-Serif;
+	text-align:left;
+	background:#f0f0f0;
+ 	color:#1A75CF;
+}
+
+/* typeahead end */

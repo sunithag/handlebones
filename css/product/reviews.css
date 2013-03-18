@@ -1,0 +1,42 @@
+.pdreviews{
+    margin-bottom: 50px;
+}
+
+.pdreviews h3{
+    float:left;
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+.pdreviews .btngrp{
+    margin-bottom:20px;
+}
+.btngrp .btn {
+    margin-right: 25px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.btngrp .btn:last-child {
+    float:right;
+
+}
+.btngrp .btn span{
+    background: url(../../images/product/button-down-arrow1.png) center right no-repeat;
+    padding-right: 23px;
+}
+/*
+.pdreviews .details{
+
+    background-color: #eee;
+    border-top:1px solid #ccc;
+    padding:100px;
+}
+.pdreviews .details .content{
+    padding:30px;
+    width: 724px;
+    height: 400px;
+    border: 1px solid #CCC;
+    background-color: #FFF ;
+}
+*/

@@ -1,0 +1,19 @@
+<div class="clearfix">
+	<h3>People Who Viewed This Item Also Viewed</h3>
+	<span class="rbtn"><button class="btn"><span>See More</span></button></span>
+</div>
+<ul class="nav nav-pills cccc">
+        {{#items}}
+		    <li>
+			    <a href="{{url}}">
+			       <div class="imgc"><img src="{{image}}" alt=""></div>
+			       <div class="title">{{name}}</div>
+			       <div class="desc">{{description}}</div>
+			       <div class="price">{{listPrice}}</div>
+			       <div class="rating"><i><i style="width: 80.36%; "></i></i></div>
+			    </a>
+
+		    </li>
+		{{/items}}
+
+</ul>

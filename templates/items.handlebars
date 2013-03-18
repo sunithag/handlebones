@@ -1,10 +1,11 @@
 <ul class="nav nav-pills cccc">
         {{#items}}
 		    <li>
-			    <a href="http://www.walmart.com/ip/Sceptre-32-X322BV-HD/15739136">
+			    <a href="{{url}}">
 			       <img src="{{image}}" alt="">
-			       <span class="title">{{name}}</span>
-			       <span class="price">${{listPrice}}</span>
+			       <div class="title">{{name}}</div>
+			       <div class="desc">{{description}}</div>
+			       <div class="price">${{listPrice}}</div>
 			    </a>
 		    </li>
          {{/items}}

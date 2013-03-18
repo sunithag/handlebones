@@ -1,0 +1,365 @@
+.wmRR{
+   background:#fff;
+   position:relative;
+   overflow:hidden;
+   margin:0 auto 60px;
+
+}
+
+#wmDDC{
+  height: 250px;	
+}
+
+#wmRRH{
+  height: 310px;	
+}
+
+#wmRRS{
+  height: 255px;	
+}
+.wmStore #wmRRS{
+  margin-bottom:20px;	
+}
+#wmRRS .car .vpt{
+	margin-left: 13px;
+	
+}
+#wmRRSI{
+	height:156px;
+	padding:0;
+}
+
+
+
+.wmRR .title{
+	color:#333;  
+	font:normal 36px/36px "myriad-pro", Arial, Helvetica, Sans-Serif;
+	padding:0 20px 25px;
+	font-size: 36px;
+	font-weight: 600;
+}
+
+
+.wmRR .imgc {
+	width:100px;
+	height:100px;
+	overflow:hidden;
+    cursor: pointer;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+	
+}
+
+#wmRRSE {
+	height:170px;
+	width:333px;
+	margin:0 15px 20px;
+}
+.wmStore #wmRRSE {
+	margin:0px 0px 20px 0px;
+
+	}
+
+#wmRRSE .title{
+	font:bold 18px/26px Arial, helvetica, sans-serif;
+	padding:0 0 10px;
+}
+
+
+#wmRRSE  p {
+	font:normal 11px/14px arial, helvetica, sans-serif;
+}
+
+
+#wmRRSE .car .vpt{
+	clear: both;
+	float: left;
+	height:134px;
+	margin: 0 15px ;
+	overflow: hidden;
+}
+#wmRRSE ul li {
+	float:left;
+	width:300px;
+	height:134px;
+}
+#wmRRSE img {
+	float:left;
+	margin:0 15px 0 0;
+}
+#wmRRSE .wmItemContent {
+	float:left;
+	width:152px;
+	height:100px;
+	text-align:left;
+}
+
+#wmRRSE .car .previous {
+	top:45px;
+	width:18px;
+}
+
+#wmRRSE .car .next {
+	top:45px;
+	width:18px;
+}
+
+
+
+.wmRR .titleSmall {
+		
+    color:#333;
+    font:normal 18px/18px "myriad-pro", Arial, Helvetica, Sans-Serif;
+    padding:0 20px 25px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.wmRR .title img{
+	margin-right:5px;
+}
+.wmRR .title a{
+	
+	font:  bold 14px Arial;
+	color: #1a75cf;
+
+}
+
+.wmRR .title span{
+	margin-left:5px;
+	font: 20px Arial;
+	color:#333;
+}
+
+
+.wmRR .car {
+	height:100%;
+	position:relative;
+	width:100%;
+	text-align:center;
+	
+}
+.wmRR .hlf,
+.wmRR .hrt{
+	float: left;
+}
+
+.wmRR .hlf .head{
+	font:500 17px "myriad-pro",Arial,Helvetica,Sans-Serif;
+	color:#333;
+	white-space:nowrap;
+	text-align:center;
+	margin-bottom: 10px;
+	font-size: 17px;
+	font-weight: 500;
+	
+}
+
+.wmRR .hrt .car .vpt{
+	 width:769px;
+	
+}
+
+.wmRR .hrt .head{
+	font:500 17px "myriad-pro",Arial,Helvetica,Sans-Serif;
+	color:#333;
+	white-space:nowrap;
+	text-align:left;
+	margin-bottom: 10px;
+	font-size: 17px;
+	font-weight: 500;
+}
+
+.wmRR .hrt .head a{
+	
+	font-family:arial;
+	font-size:13px;
+	color:#1A75CF;
+	font-weight:bold;
+	margin-left: 5px;
+}
+
+.wmRR .hrt .head a i{
+	display:inline-block;
+	border-bottom:4px solid transparent;
+	border-left:4px solid #1a75cf;
+	border-top: 4px solid transparent;
+	height:0;
+	width:0;
+}
+.wmRR .hlf .car li{
+	border-right:1px dotted #CCC;
+	padding-right:5px; 
+	margin-right:5px;
+	margin-left:10px;
+	width:161px;
+	height: 240px;
+
+}
+#wmDDC .car li{
+	border-right:1px dotted #CCC;
+	padding-right:14px; 
+}
+
+
+.wmRR .hrt .car .vpt,
+.wmRR .hlf .car .vpt{
+	height:240px;
+}
+.wmRR .car .vpt{
+	clear: both;
+	float: left;
+	height:230px;
+	margin: 0 23px 0 22px;
+	overflow: hidden;
+	width: 955px;
+}
+
+#wmRRSI .car .vpt{
+	margin:0 17px 0 17px;
+	width:978px;
+}
+#wmRRSI .car li{
+	width:324px;
+	height:156px;
+	padding:0;
+	margin:0;
+	border-right:1px dotted #CCC;
+}
+
+.wmRR .car .previous {
+	display:none;
+	height:52px;
+	width:31px;
+	background:url('../images/product/arrow-left.png');
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:70px;
+	cursor: pointer;
+	left:1px;
+	vertical-align:baseline;
+
+}
+.wmRR .car .next {
+
+	display:block;
+	height:52px;
+	width:31px;
+	background:url('../images/product/arrow-right.png');
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:70px;
+	cursor: pointer;
+	right:0;
+	vertical-align:baseline;
+
+}
+.wmRR .car ul {
+	float: left; 
+	margin: 0px; 
+	padding: 0px; 
+	display: block;
+	text-align:center;
+}	
+.wmRR .car ul li {
+	width:161px;
+	height:230px;
+	float:left; 
+	padding-right:15px; 
+	margin-left:15px;
+}
+
+
+.wmRR .car .price{
+	font: bold 24px Arial;
+	color: #333;
+	text-align:center;
+	margin: 15px 0 10px;
+}
+
+.wmRR .car .submap {
+	font: bold 17px Arial;
+	text-align:center;
+	margin-top: 23px;
+	margin-bottom:16px;
+}
+
+.wmRR .car .price sup{
+	font: bold 14px Arial;
+}
+
+
+.wmRR .car .rprc{
+	font: 11px Verdana;
+	color: #ccc;
+	text-align:center;
+	margin-bottom:10px;
+}
+.wmRR .car .rprc span{
+	text-decoration: line-through;
+}
+.wmRR .car .ttl,
+.wmRR .car .sttl{
+	text-align:center;
+	font: 11px Verdana;
+	color: #1a75cf;
+	text-align:center;
+	height:28px;
+	line-height:14px;
+	margin-bottom:6px;
+	overflow:hidden;
+}
+
+.wmRR .car .sttl{
+	color: #333;
+}
+.wmRR .car .cat1{
+	margin-top: 25px;
+	font: bold 12px Arial;
+	color: #333;
+	text-align: center;
+	height:17px;
+	margin-bottom:6px;
+	overflow:hidden;
+}
+
+.wmRR .car .cat2{
+	font: bold 12px Arial;
+	color:#1a75cf;
+	text-align: center;
+	height:28px;
+	overflow:hidden;
+}
+
+.wmRR .car .stars, .wmRR .car .stars div{
+	
+	width: 60px;
+	height: 12px;
+	display: inline-block;
+	background: url(http://www.walmart.com/i/pcache/rating/v1/star.png) repeat-x;
+    background-position: 0 0;
+    text-align:left;	
+
+}
+
+
+.wmRR .car .stars div{
+	display: block;
+	background-position: 0 -13px;
+}
+.wmRR .car .cnt{
+	font: 10px Verdana;
+	color: #1a75cf;
+	
+	
+}	
+.wmStore .wmTwoColumn .wmColumn.col_1 #wmRRSE {
+	height:155px !important;
+	margin:0 0 20px 0 !important;
+	background:url('/img/shopTab/storeSprite.png') -12px -111px no-repeat;
+	overflow:hidden;
+	padding:20px 15px 0;
+}

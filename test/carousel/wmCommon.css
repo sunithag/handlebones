@@ -1,0 +1,573 @@
+/*
+ * Walmart.com common styles v 1.0 
+ * Used to normalize the rendering of html/css 
+ * cross-browser and cross-device. For reference, 
+ * see the wiki for component and style documentation.
+ * 
+ * Built by Keo Keonorasak, Sunitha Gourishetty, 
+ * and Dave Quintana. 8/8/2012. 
+ * Based on Bootstrap v2.0.4
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+audio:not([controls]) {
+  display: none;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+a:link {
+    color: #1A75CF;
+}
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+input[type="search"] {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+}
+
+.row:after {
+  clear: both;
+}
+
+[class*="span"] {
+  float: left;
+  padding:0 10px;
+}
+
+/********** non-semantic helpers **********/
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+.padding-none {
+	padding:0;
+}
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+.marginTop {
+	margin-top:20px;
+}
+
+.invisible {
+  visibility: hidden;
+}
+.margin-bottom-20 {
+	margin-bottom:20px;
+}
+
+/*** decorative ***/
+hr {
+  margin: 18px 0;
+  border: 0;
+  border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #d2d2d2;
+}
+
+abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 18px;
+  border-left: 5px solid #d2d2d2;
+}
+
+blockquote p {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22.5px;
+}
+
+blockquote small {
+  display: block;
+  line-height: 18px;
+  color: #d2d2d2;
+}
+
+blockquote small:before {
+  content: '\2014 \00A0';
+}
+
+blockquote.pull-right {
+  float: right;
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #d2d2d2;
+  border-left: 0;
+}
+
+blockquote.pull-right p,
+blockquote.pull-right small {
+  text-align: right;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+address {
+  display: block;
+  margin-bottom: 18px;
+  font-style: normal;
+  line-height: 18px;
+}
+
+small {
+  font-size: 100%;
+}
+.item {
+	
+}
+cite {
+  font-style: normal;
+}
+.cssArrow {
+	display:inline-block;
+	zoom:1;
+	width:0;
+	height:0;
+	border-top:5px solid transparent;
+	border-bottom:5px solid transparent;
+	border-left:7px solid #1A75CF;
+	margin-left:5px;
+}
+/********** component clearfix **********/
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+}
+
+.container:before,
+.container:after {
+  display: table;
+  content: "";
+}
+
+.container:after {
+  clear: both;
+}
+.nav ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.line1,
+.line2 {
+	display:block;
+}
+/***** Layout *****/
+#wmMainContent {
+	width:1032px;
+	margin:0 auto;
+	min-height:565px;
+	background:#fff;
+	position:relative;
+	left:0;
+	top:0;
+}
+#wmMainContent > div {
+	float:left;
+}
+#wmHomePageWrapper {
+	z-index:-20;
+	position:absolute;
+	top:43px;
+	left:0;
+	width:100%;
+	height:62px;
+	background:url('/img/common/commonSprite.png') 0 -185px repeat-x;
+}
+#wmCustomPageWrapper {
+	z-index:-10;
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+
+}
+.wmHeader .wmTopMainNav.container {
+	background:#fff;
+}
+.customColumn_One{ width:808px; }
+.lt-ie8 .customColumn_One{ position:relative; z-index:1;}
+
+
+.wmStars,.wmStars div{
+  width:60px;
+  height:12px;
+  text-align:left;
+  display: inline-block;
+  background:url(http://i2.walmartimages.com/i/pcache/rating/v1/star.png) repeat-x;
+  background-position: 0 0;
+  text-align:left;
+}
+.lt-ie8 .wmStars div {
+	text-align:left;
+}
+.wmStars div{
+  display: block;
+  background-position: 0 -13px; 
+}
+
+.floatleft{float:left;}
+.floatright{float:right;}
+
+/**** WALMART FONTS : DEFINITIONS *******************/
+/** BEGIN GRAYSCALE COLOR FONT STYLING AREA BEGIN ***/
+/*****************************************/
+/********** GRAYSCALE : Default #333 ************************************************************************/
+.BodyXS, .BodyXSBold, .BodySLtgry2, .BodyS, .BodySGrey, .BodyM, .BodyMBold, .BodyL, .BodyLBold, .BodyXL,
+	.BodyXLBold, .Body2XL, .Body3XL, .Body4XL, .Body5XL, .PriceMItalicGry
+	{ color:#333; }
+/********** GRAYSCALE : Medium #666 ************************************************************************/
+.BodyXSLtgry, .BodyXSBoldLtgry, .BodySBold, .BodySBoldLtgry, .BodySLtgry, .BodyX, .BodyMLtgry,
+	.BodyMBoldLtgry, .BodyLLtgry, .BodyLBoldLtgry, .BodyXLLtgry, .BodyXLBoldLtgry, .Body3XLBoldLtgry,
+	.Body2XLLtgry, .Body3XLLtgry, .Body4XLLtgry, .Body5XLLtgry, .PriceXSLtgry, .PriceXSBoldLtgry,
+	.PriceSLtgry, .BodyXLBoldGrey, .PriceSBoldLtgry
+	{ color:#666; }
+/********** GRAYSCALE : Light #999 *************************************************************************/
+.BodyXSGrey, .BodyXSLtgry2, .BodySBoldGrey, .BodyMBoldGrey, .BodyMLtgry2, .BodyLGrey, .BodyLBoldGrey,
+	.BodyXLBoldLtgry2, .BodyLBoldMGrey, .Price3XLGrey, .Price5XLGrey
+	{ color:#999; }
+/********** GRAYSCALE : White #FFF *************************************************************************/
+.BodyXSWht, .BodyXSBoldWht, .BodySWht, .BodySBoldWht, .BodyMWht, .BodyMBoldWht, .BodyLWht, .BodyLBoldWht,
+	.BodyXLWht, .BodyXLBoldWht, .Body2XLWht, .Body3XLWht, .Body4XLWht, .Body5XLWht
+	{ color:#FFF; }
+/********** GRAYSCALE : FONT WEIGHT Normal *****************************************************************/
+.BodyXS, .BodyXSGrey, .BodyXSLtgry, .BodyXSLtgry2, .BodyS, .BodySGrey, .BodySLtgry, .BodySLtgry2, .BodyX,
+	.BodyM, .BodyMLtgry, .BodyMLtgry2, .BodyLGrey, .BodyL, .BodyLLtgry, .BodyXL, .BodyXLLtgry , .BodyXSWht,
+	.BodyXSBoldWht, .PriceXSLtgry, .BodySWht, .PriceSLtgry, .BodyMWht, .BodyMBoldWht, .BodyLWht, 
+	.BodyXLWht, .PriceMItalicGry
+	{ font-weight:normal; }
+/********** GRAYSCALE : FONT WEIGHT Bold *****************************************************************/
+.BodyXSBold, .BodyXSBoldLtgry, .BodySBold, .BodySBoldLtgry, .BodySBoldGrey, .BodyMBold, .BodyMBoldGrey,
+	.BodyMBoldLtgry, .BodyLBoldGrey, .BodyLBoldMGrey, .BodyLBold, .BodyLBoldLtgry, .BodyXLBold, .BodyXLBoldLtgry,
+	.BodyXLBoldLtgry2, .Body2XL, .Body3XL, .Body4XL, .Body5XL, .Body3XLBoldLtgry, .BodyXSBoldWht, 
+	.PriceXSBoldLtgry, .BodySBoldWht, .BodyLBoldWht, .BodyXLBoldWht, .BodyXLBoldGrey, .Body2XLWht, .Body3XLWht, 
+	.Body4XLWht, .Body5XLWht, .Price3XLGrey, .Price5XLGrey, .PriceSBoldLtgry
+	{ font-weight:bold; }
+/********** GRAYSCALE : Arial Preferred FONT **************************************************************/
+.Body2XL,.Body3XL, .Body3XLBoldLtgry, .Body4XL,.Body5XL, .Body2XLLtgry, .Body3XLLtgry, .Body4XLLtgry, 
+	.Body5XLLtgry, .Body2XLWht, .Body3XLWht, .Body4XLWht, .Body5XLWht, .Price3XLGrey, .Price5XLGrey
+	{ font-family:Arial,sans-serif; }
+/********** GRAYSCALE : 9px Font-Size *********************************************************************/
+.BodyXS, .BodyXSBold, .BodyXSGrey, .BodyXSLtgry, .BodyXSLtgry2, .BodyXSBoldLtgry, .BodyXSWht, .BodyXSBoldWht, 
+	.PriceXSLtgry, .PriceXSBoldLtgry
+	{ font-size:9px; }
+/********** GRAYSCALE :  10px Font-Size *******************************************************************/
+.BodyS, .BodySGrey, .BodySBold, .BodySBoldLtgry, .BodySBoldGrey, .BodySLtgry, .BodySLtgry2, .BodySWht, 
+	.BodySBoldWht, .PriceSLtgry
+	{ font-size:10px; }
+/********** GRAYSCALE :  11px Font-Size *******************************************************************/
+.BodyX, .BodyM, .BodyMBold, .BodyMBoldGrey, .BodyMLtgry, .BodyMLtgry2, .BodyMBoldLtgry, .BodyMWht, .BodyMBoldWht,
+	.PriceMItalicGry
+	{ font-size:11px; }
+/********** GRAYSCALE :  12px Font-Size *******************************************************************/
+.BodyLGrey, .BodyLBoldGrey, .BodyLBoldMGrey, .BodyL, .BodyLBold, .BodyLLtgry, .BodyLBoldLtgry, .BodyLWht, 
+	.BodyLBoldWht
+	{ font-size:12px; }
+/********** GRAYSCALE :  13px Font-Size *******************************************************************/
+.BodyXL, .BodyXLBold, .BodyXLLtgry, .BodyXLBoldLtgry, .BodyXLBoldLtgry2, .BodyXLWht, .BodyXLBoldWht, 
+	.BodyXLBoldGrey
+	{ font-size:13px; }
+/********** GRAYSCALE :  14px >= Font-Size *****************************************************************/
+.Body2XL, .Body2XLLtgry, .Body2XLWht
+	{ font-size:15px; }
+.Body3XL, .Body3XLBoldLtgry, .Body3XLLtgry, .Body3XLWht, .Price3XLGrey
+	{ font-size:17px; }
+.Body4XL, .Body4XLLtgry, .Body4XLWht
+	{ font-size:19px; }
+.Body5XL, .Body5XLLtgry, .Body5XLWht, .Price5XLGrey
+	{ font-size:24px; }
+/********** GRAYSCALE :  Custom Overrides ******************************************************************/
+.PriceMItalicGry{ font-style:italic; }
+/** END GRAYSCALE Font Styling **********************************************************************/
+
+/*****************************************/
+/** BEGIN COLORED FONT STYLING AREA BEGIN ***/
+/*****************************************/
+/********** COLORED : Dark Blue #039 **************************************************************************/
+.BodyXSBlue, .BodySBlue, .BodyMBlue, .BodyMBoldBlue, .BodyLBoldBlue, .BodyXLBlue, .BodyXLBoldBlue, 
+	.Body2XLBlue, .Body3XLBlue, .Body4XLBlue, .Body5XLBlue, .NavSBold
+	{ color:#039; }
+/********** COLORED : Medium Blue #1A75CF *********************************************************************/
+.BodyXSMblue , .BodyXSBoldMblue, .BodySMblue, .BodySBoldMblue, .BodyMMblue, .BodyMBoldMblue, .BodyLMblue,
+	.BodyLBoldMblue, .BodyXLMblue, .BodyXLBoldMblue, .Body2XLMblue, .Body3XLMblue, .Body4XLMblue, 
+	.Body5XLMblue, .POVM, .POVMBold, .Popup5XL, .POV5XL, .NavXLBold, .NavM, .NavMBold
+	{ color:#1A75CF; }
+/********** COLORED : Green #093 ******************************************************************************/
+.BodySBoldGreen, .BodyMBoldGreen, .BodyLBoldGreen, .BodyXLBoldGreen, .Body2XLGreen, .Body3XLGreen, 
+	.Body4XLGreen, .Body5XLGreen
+	{ color:#093; }
+/********** COLORED : Orange #F60 *****************************************************************************/
+.ImportantXS, .ImportantXSBold, .BodySOra, .BodySBoldOra, .BodySBoldOrg, .ImportantS, .ImportantSBold, 
+	.BodyMBoldOrg, .ImportantM, .ImportantMBold, .ImportantL, .ImportantLBold, .BodyXLBoldOrg, .ImportantXL,
+	.ImportantXLBold, .Important2XL, .Important3XL, .Important4XL, .Important5XL
+	{ color:#F60; }
+/********** COLORED : Red #C00 ********************************************************************************/
+.ErrorXS, .ErrorXSBold, .PriceXS, .PriceXSBold, .BodySRed, .BodySBoldRed, .ErrorS, .ErrorSBold, .PriceS, 
+	.PriceSBold, .BodyMRed, .BodyMBoldRed, .ErrorM, .ErrorMBold, .PriceM, .PriceMBold, .BodyLBoldRed, .ErrorL,
+	.ErrorLBold, .PriceL, .PriceLBold, .BodyXLBoldRed, .ErrorXL, .ErrorXLBold, .PriceXL, .PriceXLBold,
+	.Body2XLRed, .Body3XLRed, .Body4XLRed, .Body5XLRed, .Error2XL, .Error3XL, .Error4XL, .Error5XL, .Price2XL,
+	.Price3XL, .Price4XL, .Price5XL
+	{ color:#C00; }
+/********** COLORED : FONT WEIGHT Normal *********************************************************************/
+.BodyXSMblue , .BodyXSBlue, .BodySBlue, .BodySMblue, .BodyMBlue, .BodyXLBlue, .BodyMMblue, .BodyLMblue
+	.BodySOra, .BodyXLMblue, .ErrorXS, .ImportantXS, .PriceXS, .BodySRed, .ErrorS, .ImportantS, .PriceS, 
+	.ErrorM, .ImportantM, .POVM, .PriceM, .ErrorL, .ImportantL, .PriceL, .ErrorXL, .ImportantXL, .PriceXL,
+	.Popup5XL, .POV5XL
+	{ font-weight:normal; }
+/********** COLORED : FONT WEIGHT Bold ***********************************************************************/
+.BodyXSBoldMblue, .BodySBoldMblue, .BodyMBoldBlue, .BodyLBoldBlue, .BodyXLBoldBlue, .Body2XLBlue, .Body3XLBlue, 
+	.Body4XLBlue, .Body5XLBlue, .BodyMBoldMblue, .BodyLBoldMblue, .BodyXLBoldMblue, .Body2XLMblue, .Body3XLMblue, 
+	.Body4XLMblue, .Body5XLMblue, .ErrorXSBold, .ImportantXSBold, .PriceXSBold, .BodySBoldGreen, .BodySBoldRed,
+	.ErrorSBold, .BodySBoldOra, .BodySBoldOrg, .ImportantSBold, .PriceSBold, .BodyMBoldGreen, .BodyMRed, 
+	.BodyMBoldRed, .ErrorMBold, .BodyMBoldOrg, .ImportantMBold, .POVMBold, .PriceMBold, .BodyLBoldGreen,
+	.BodyLBoldRed, .ErrorLBold, .ImportantLBold, .PriceLBold, .BodyXLBoldGreen, .BodyXLBoldRed, .ErrorXLBold,
+	.BodyXLBoldOrg, .ImportantXLBold, .PriceXLBold, .Body2XLGreen, .Body3XLGreen, .Body4XLGreen, .Body5XLGreen,
+	.Body2XLRed, .Body3XLRed, .Body4XLRed, .Body5XLRed, .Error2XL, .Error3XL, .Error4XL, .Error5XL, 
+	.Important2XL, .Important3XL, .Important4XL, .Important5XL, .Price2XL, .Price3XL, .Price4XL, .Price5XL,
+	.NavMBold, .NavXLBold, .NavSBold
+	{ font-weight:bold; }
+/********** COLORED : Arial Preferred FONT ********************************************************************/
+.Body2XLBlue,.Body3XLBlue,.Body4XLBlue,.Body5XLBlue, .Body2XLMblue, .Body3XLMblue, .Body4XLMblue, .Body5XLMblue,
+	.Body2XLGreen, .Body3XLGreen, .Body4XLGreen, .Body5XLGreen, .Body2XLRed, .Body3XLRed, .Body4XLRed, .Body5XLRed,
+	.Error2XL, .Error3XL, .Error4XL, .Error5XL, .Important2XL, .Important3XL, .Important4XL, .Important5XL, 
+	.Popup5XL,.POV5XL, .Price2XL, .Price3XL, .Price4XL, .Price5XL
+	{font-family:Arial,sans-serif;}
+/********** COLORED : 9px Font-Size ***************************************************************************/
+.BodyXSMblue, .BodyXSBoldMblue, .BodyXSBlue,.ErrorXS, .ErrorXSBold, .ImportantXS, .ImportantXSBold, .PriceXS, 
+	.PriceXSBold
+	{ font-size:9px; }
+/********** COLORED : 10px Font-Size **************************************************************************/
+.BodySBlue, .BodySMblue, .BodySBoldMblue, .BodySOra, .BodySBoldGreen, .BodySRed, .BodySBoldRed, .ErrorS, 
+	.ErrorSBold, .BodySBoldOrg, .ImportantS, .ImportantSBold, .PriceS, .PriceSBold, .BodySBoldOra, .NavSBold
+	{ font-size:10px; }
+/********** COLORED : 11px Font-Size **************************************************************************/
+.BodyMBlue, .BodyMBoldBlue, .BodyMMblue, .BodyMBoldMblue, .BodyMBoldGreen, .BodyMRed, .BodyMBoldRed, .ErrorM, 
+	.ErrorMBold, .BodyMBoldOrg, .ImportantM, .ImportantMBold, .POVM, .POVMBold, .PriceM, .PriceMBold, .NavM,
+	.NavMBold
+	{ font-size:11px; }
+/********** COLORED : 12px Font-Size **************************************************************************/
+.BodyLBoldBlue, .BodyLMblue, .BodyLBoldMblue, .BodyLBoldGreen, .BodyLBoldRed, .ErrorL, .ErrorLBold, .ImportantL, 
+	.ImportantLBold, .PriceL, .PriceLBold
+	{ font-size:12px; }
+/********** COLORED : 13px Font-Size **************************************************************************/
+.BodyXLBlue, .BodyXLBoldBlue, .BodyXLMblue, .BodyXLBoldMblue, .BodyXLBoldGreen, .BodyXLBoldRed, .ErrorXL, 
+	.ErrorXLBold, .BodyXLBoldOrg, .ImportantXL, .ImportantXLBold, .PriceXL, .PriceXLBold, .NavXLBold
+	{ font-size:13px; }
+/********** COLORED :  14px ++ Font-Size **********************************************************************/
+.Body2XLBlue, .Body2XLMBlue, .Body2XLGreen, .Body2XLRed, .Error2XL, .Important2XL, .Price2XL
+	{ font-size:15px; }
+.Body3XLBlue, .Body3XLMblue, .Body3XLGreen, .Body3XLRed, .Error3XL, .Important3XL, .Price3XL
+	{ font-size:17px; }
+.Body4XLBlue, .Body4XLMblue, .Body4XLGreen, .Body4XLRed, .Error4XL, .Important4XL, .Price4XL
+	{ font-size:19px; }
+.Popup5XL, .POV5XL
+	{ font-size:21px; }
+.Body5XLBlue, .Body5XLMblue, .Body5XLGreen, .Body5XLRed, .Error5XL, .Important5XL, .Price5XL
+	{ font-size:24px;  }
+/********** COLORED :  Custom Overrides **********************************************************************/
+.BodySBoldOra{ white-space:nowrap; }
+/** END COLORED Font Styling *********************************************************************************/
+
+/*****************************************/
+/** BEGIN PRICING FONT STYLING AREA BEGIN ***/
+/*****************************************/
+.priceLevel_1 {}
+.priceLevel_1 .priceSign{ font: bold 30px/18px Arial, Helvetica, Sans-Serif;}
+.priceLevel_1 .priceDollar{ font: bold 30px/18px Arial, Helvetica, Sans-Serif; }
+.priceLevel_1 .priceCent{ font: bold 17px/10px Arial, Helvetica, Sans-Serif; vertical-align:top;}
+.priceLevel_2 {}
+.priceLevel_2 .priceSign{ font: bold 24px/16px Arial, Helvetica, Sans-Serif; }
+.priceLevel_2 .priceDollar{ font: bold 24px/16px Arial, Helvetica, Sans-Serif; }
+.priceLevel_2 .priceCent{ font: bold 14px/10px Arial, Helvetica, Sans-Serif; vertical-align:top;}
+.priceLevel_3 {}
+.priceLevel_3 .priceSign{ font: bold 19px/12px Arial, Helvetica, Sans-Serif; }
+.priceLevel_3 .priceDollar{ font: bold 19px/12px Arial, Helvetica, Sans-Serif; }
+.priceLevel_3 .priceCent{ font: bold 11px/8px Arial, Helvetica, Sans-Serif; vertical-align:top;}
+.priceLevel_4 {}
+.priceLevel_4 .priceSign{ font: bold 16px/10px Arial, Helvetica, Sans-Serif; }
+.priceLevel_4 .priceDollar{ font: bold 16px/10px Arial, Helvetica, Sans-Serif; }
+.priceLevel_4 .priceCent{ font: bold 16px/10px Arial, Helvetica, Sans-Serif; }
+
+.priceColor_{ color:#333333 !important; }
+.priceColor_red{ color:#FF0000 !important;}
+.priceColor_white{ color:#FFFFFF !important; }
+.priceColor_blue{ color:#017DC3 !important; }
+.priceColor_yellow{ color:#FDB930 !important; }
+
+.priceBox { position: absolute; font-family: Arial,Helvetica,Sans-Serif;}
+.povPrice{  }
+.povPrice p{ } 
+/*****************************************/
+/** END PRICING FONT STYLING AREA BEGIN ***/
+/*****************************************/
+
+/** Sprite Definitions **/
+.wmCommonSprite { background:url('/img/common/commonSprite.png') no-repeat; border-width:0;}

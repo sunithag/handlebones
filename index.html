@@ -2,8 +2,8 @@
   <head>
     <link rel="stylesheet" media="screen" href="styles/base.css"/>
     <link rel="stylesheet" media="screen" href="styles/jquery-ui-1.10.1.min.css"/>
-    <link rel="stylesheet" media="screen" href="styles/index.css"/>
-    <link rel="stylesheet" media="screen" href="styles/navstyles.css"/>
+    <link rel="stylesheet" media="screen" href="css/TVs/index.css"/>
+    <link rel="stylesheet" media="screen" href="css/common/navstyles.css"/>
   </head>
   <body>
   <div class="container">
@@ -32,49 +32,17 @@
       </div>
    </div>
    <div class="filters clearfix">
-      <ul class="nav nav-pills pull-right">
-        <li ><label>Type</label>
-        <select id = "typeList">
-            <option value = "All">All</option>
-            <option value = "LCD">LCD</option>
-            <option value = "LED-LCD">LED-LCD</option>
-             <option value = "Plasma">Plasma</option>
-        </select></li>
-        <li><label>Brand</label>
-          <select id = "brandList">
-             <option value = "All">All</option>
-             <option value = "2">Samsung</option>
-             <option value = "3">VIZIO </option>
-             <option value = "4">RCA</option>
-             <option value = "5">Sceptre</option>
-             <option value = "6">Element</option>
-             <option value = "7">HANNspree</option>
-             <option value = "8">Proscan</option>
-             <option value = "9">Sony </option>
-             <option value = "10">Emerson</option>
-          </select></li>
-        <li ><label>Sort</label>
-        <select id = "sortList">
-              <option value = "1">Default</option>
-              <option value = "2">Price highest</option>
-              <option value = "3">Size</option>
-              <option value = "4">Brand</option>
-        </select> </li>
-      </ul>
-      <ul class="nav nav-pills pull-left">
-        <li style="margin-top:10px"><i class="sprite-logoicon"></i><div class="logo">TVFinder<sup>TM</sup></div></li>
-        <li style="margin-left:20px"><div class="slider"><span>Size</span><div id="size-slider"></div></div></li>
-      </ul>
-      </div>
-      <div class="summary">
-          <div class="clearfix" >
-                 <span class="clear">
-                        <input type="button" id="clear_filters" value="Clear Filters" style="border-radius:5px;background-color:white;" >
-                 </span>
-                 <span class="results">
-                    <span id="count"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA
-                 </span>
-          </div>
+
+       <div class="pull-right">
+
+       </div>
+       <div class="pull-left">
+
+       </div>
+
+    </div>
+    <div class="summary">
+
       </div>
       <div class="items"> </div>
       <footer class="footer">
@@ -134,7 +102,13 @@
       <article class="col centre"><ul><li><a title="Walmart Money Centre" href="#">Walmart Money Centre</a></li><li><i class="sprite-footerimg"></i></li></ul></article>
       </section>
       </footer>
+      <div id="productOverlay">
 
+          <div class="pinfo">
+              <span class="close"></span>
+              <span class="title">title</span>
+          </div>
+      </div>
 </div>
 </body>
 
@@ -144,6 +118,6 @@
   <script src="lib/backbone.js"></script>
   <script src="lib/jquery-ui-1.10.1.min.js"></script>
   <script src="templates.js"></script>
-  <script src="application.js"></script>
+  <script src="javascript/TVs/application.js"></script>
 
 </html>
