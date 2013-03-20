@@ -1,4 +1,4 @@
-           <div class="clearfix">
+           <div class="clearfix" id="Prod-Details">
                 <h3>Product Details</h3>
                 <span class="rbtn"><button class="btn"><span>Have a Question?</span></button></span>
             </div>
@@ -6,22 +6,28 @@
 
           <div class="tabbable tabs-left">
                 <ul class="nav nav-tabs">
+                {{#items}}
                     <li class="active"><a href="#lA" data-toggle="tab">Full Description</a></li>
                     <li><a href="#lB" data-toggle="tab">Specifications</a></li>
                     <li><a href="#lC" data-toggle="tab">Warranty</a></li>
                     <li><a href="#lD" data-toggle="tab">Financing</a></li>
                     <li><a href="#lE" data-toggle="tab">Gifting</a></li>
-
+		        {{/items}}
                 </ul>
+                {{#items}}
                 <div class="tab-content">
                     <div class="tab-pane active" id="lA">
-                        <p>Full Description goes here...</p>
+                        <p>{{genericContent.longDescription}}...<a href="#Prod-Details"> Continue Reading</a></p>
                     </div>
                     <div class="tab-pane" id="lB">
-                        <p>Specifications goes here...</p>
+                        {{#each_upto itemAttributes 5}}
+                        <div style="font-weight:bold">{{attrDisplayName}}:</div>
+                        <div>{{attributeValue}}</div>
+                        </br>
+                        {{/each_upto}}
                     </div>
                     <div class="tab-pane" id="lC">
-                        <p>Warranty goes here</p>
+                        <p>{{genericContent.supplierWarranty}}</p>
                     </div>
                     <div class="tab-pane" id="lD">
                         <p>Financing goes here</p>
@@ -30,6 +36,7 @@
                         <p>Gifting ...</p>
                     </div>
                 </div>
+                {{/items}}
             </div>
 
             </div>

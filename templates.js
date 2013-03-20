@@ -17921,3 +17921,9091 @@ helpers = helpers || Handlebars.helpers; data = data || {};
   return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
   });
 })();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\">\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills cccc\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "           <div class=\"clearfix\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n\n                </ul>\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>Full Description goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        <p>Specifications goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>Warranty goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n            </div>\n\n            </div>\n";
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous fade\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills cccc\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\">\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills cccc\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "           <div class=\"clearfix\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n\n                </ul>\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>Full Description goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        <p>Specifications goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>Warranty goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n            </div>\n\n            </div>\n";
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous fade\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\">\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			    </a>\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\">\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "           <div class=\"clearfix\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n\n                </ul>\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>Full Description goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        <p>Specifications goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>Warranty goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n            </div>\n\n            </div>\n";
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous fade\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\">\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			    </a>\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\">\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "           <div class=\"clearfix\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n\n                </ul>\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>Full Description goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        <p>Specifications goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>Warranty goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n            </div>\n\n            </div>\n";
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous fade\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\">\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			    </a>\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "           <div class=\"clearfix\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n\n                </ul>\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>Full Description goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        <p>Specifications goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>Warranty goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n            </div>\n\n            </div>\n";
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous fade\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "           <div class=\"clearfix\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n\n                </ul>\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>Full Description goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        <p>Specifications goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>Warranty goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n            </div>\n\n            </div>\n";
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous fade\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li style=\"border:none\">\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "           <div class=\"clearfix\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n\n                </ul>\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>Full Description goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        <p>Specifications goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>Warranty goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n            </div>\n\n            </div>\n";
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous fade\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "           <div class=\"clearfix\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n\n                </ul>\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>Full Description goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        <p>Specifications goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>Warranty goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n            </div>\n\n            </div>\n";
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous fade\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>Full Description goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        <p>Specifications goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>Warranty goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous fade\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        <p>Specifications goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>Warranty goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous fade\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        <p>Specifications goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>Warranty goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        <p>Specifications goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>Warranty goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        <p>Specifications goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>Warranty goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\">\n                <h3 id=\"Prod-Details\">Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        <p>Specifications goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>Warranty goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        <p>Specifications goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>Warranty goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        <p>Specifications goes here...</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.supplierWarranty)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data};
+  if (stack2 = helpers.itemAttributes) { stack2 = stack2.call(depth0, options); }
+  else { stack2 = depth0.itemAttributes; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  if (!helpers.itemAttributes) { stack2 = blockHelperMissing.call(depth0, stack2, options); }
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.supplierWarranty)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                        <div>";
+  if (stack1 = helpers.attrDisplayName) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attrDisplayName; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ":</div>\n                        <div>";
+  if (stack1 = helpers.attributeValue) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attributeValue; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n                        ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data};
+  stack2 = ((stack1 = helpers.each_upto),stack1 ? stack1.call(depth0, depth0.itemAttributes, 5, options) : helperMissing.call(depth0, "each_upto", depth0.itemAttributes, 5, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.supplierWarranty)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                        <div>";
+  if (stack1 = helpers.attrDisplayName) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attrDisplayName; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ":</div>\n                        <div>";
+  if (stack1 = helpers.attributeValue) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attributeValue; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n                        ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data};
+  stack2 = ((stack1 = helpers.each_upto),stack1 ? stack1.call(depth0, depth0.itemAttributes, 5, options) : helperMissing.call(depth0, "each_upto", depth0.itemAttributes, 5, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.supplierWarranty)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                        <div>";
+  if (stack1 = helpers.attrDisplayName) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attrDisplayName; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ":</div></br>\n                        <div>";
+  if (stack1 = helpers.attributeValue) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attributeValue; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n                        ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data};
+  stack2 = ((stack1 = helpers.each_upto),stack1 ? stack1.call(depth0, depth0.itemAttributes, 5, options) : helperMissing.call(depth0, "each_upto", depth0.itemAttributes, 5, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.supplierWarranty)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                        <div>";
+  if (stack1 = helpers.attrDisplayName) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attrDisplayName; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ":</div>\n                        <div>";
+  if (stack1 = helpers.attributeValue) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attributeValue; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n                        </br>\n                        ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span>(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data};
+  stack2 = ((stack1 = helpers.each_upto),stack1 ? stack1.call(depth0, depth0.itemAttributes, 5, options) : helperMissing.call(depth0, "each_upto", depth0.itemAttributes, 5, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.supplierWarranty)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                        <div>";
+  if (stack1 = helpers.attrDisplayName) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attrDisplayName; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ":</div>\n                        <div>";
+  if (stack1 = helpers.attributeValue) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attributeValue; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n                        </br>\n                        ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span class=\"cnt\">(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data};
+  stack2 = ((stack1 = helpers.each_upto),stack1 ? stack1.call(depth0, depth0.itemAttributes, 5, options) : helperMissing.call(depth0, "each_upto", depth0.itemAttributes, 5, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.supplierWarranty)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                        <div>";
+  if (stack1 = helpers.attrDisplayName) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attrDisplayName; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ":</div>\n                        <div>";
+  if (stack1 = helpers.attributeValue) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attributeValue; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n                        </br>\n                        ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span class=\"cnt\">(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    <div class=\"navigation\"><span class=\"current\">1</span> of <span class=\"total\">5</span> Reviews</div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data};
+  stack2 = ((stack1 = helpers.each_upto),stack1 ? stack1.call(depth0, depth0.itemAttributes, 5, options) : helperMissing.call(depth0, "each_upto", depth0.itemAttributes, 5, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.supplierWarranty)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                        <div>";
+  if (stack1 = helpers.attrDisplayName) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attrDisplayName; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ":</div>\n                        <div>";
+  if (stack1 = helpers.attributeValue) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attributeValue; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n                        </br>\n                        ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ".. <a href=\"#Review\"> Read more</a></div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span class=\"cnt\">(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    <div class=\"navigation\"><span class=\"current\">1</span> of <span class=\"total\">5</span> Reviews</div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data};
+  stack2 = ((stack1 = helpers.each_upto),stack1 ? stack1.call(depth0, depth0.itemAttributes, 5, options) : helperMissing.call(depth0, "each_upto", depth0.itemAttributes, 5, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.supplierWarranty)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                        <div style=\"font-weight:bold\">";
+  if (stack1 = helpers.attrDisplayName) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attrDisplayName; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ":</div>\n                        <div>";
+  if (stack1 = helpers.attributeValue) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attributeValue; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n                        </br>\n                        ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ".. <a href=\"#Review\"> Read more</a></div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span class=\"cnt\">(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    <div class=\"navigation\"><span class=\"current\">1</span> of <span class=\"total\">5</span> Reviews</div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data};
+  stack2 = ((stack1 = helpers.each_upto),stack1 ? stack1.call(depth0, depth0.itemAttributes, 5, options) : helperMissing.call(depth0, "each_upto", depth0.itemAttributes, 5, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.supplierWarranty)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                        <div style=\"font-weight:bold\">";
+  if (stack1 = helpers.attrDisplayName) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attrDisplayName; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ":</div>\n                        <div>";
+  if (stack1 = helpers.attributeValue) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attributeValue; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n                        </br>\n                        ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ".. <a href=\"#Review\"> Read more</a></div>\n          <div class=\"rdetails clearfix\">\n          <div class=\"left\">\n            <div><span>Styling:</span><span></span></div>\n            <div><span>Quality:</span><span></span></div>\n            <div><span>Fit Accuracy:</span><span></span></div>\n            <div><span>Value:</span><span></span></div>\n            <div><span>Satisfaction:</span><span></span></div>\n          </div>\n          <div class=\"right\"></div>\n          </div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span class=\"cnt\">(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    <div class=\"navigation\"><span class=\"current\">1</span> of <span class=\"total\">5</span> Reviews</div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data};
+  stack2 = ((stack1 = helpers.each_upto),stack1 ? stack1.call(depth0, depth0.itemAttributes, 5, options) : helperMissing.call(depth0, "each_upto", depth0.itemAttributes, 5, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.supplierWarranty)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                        <div style=\"font-weight:bold\">";
+  if (stack1 = helpers.attrDisplayName) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attrDisplayName; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ":</div>\n                        <div>";
+  if (stack1 = helpers.attributeValue) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attributeValue; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n                        </br>\n                        ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ".. <a href=\"#Review\"> Read more</a></div>\n          <div class=\"rdetails clearfix\">\n          <div class=\"left\">\n            <div><span>Styling:</span><span></span></div>\n            <div><span>Quality:</span><span></span></div>\n            <div><span>Fit Accuracy:</span><span></span></div>\n            <div><span>Value:</span><span></span></div>\n            <div><span>Satisfaction:</span><span></span></div>\n          </div>\n          <div class=\"right\"></div>\n          </div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span class=\"cnt\">(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    <div class=\"navigation\"><span class=\"current\">1</span> of <span class=\"total\">5</span> Reviews</div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data};
+  stack2 = ((stack1 = helpers.each_upto),stack1 ? stack1.call(depth0, depth0.itemAttributes, 5, options) : helperMissing.call(depth0, "each_upto", depth0.itemAttributes, 5, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.supplierWarranty)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                        <div style=\"font-weight:bold\">";
+  if (stack1 = helpers.attrDisplayName) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attrDisplayName; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ":</div>\n                        <div>";
+  if (stack1 = helpers.attributeValue) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attributeValue; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n                        </br>\n                        ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ".. <a href=\"#Review\"> Read more</a></div>\n          <div class=\"rdetails clearfix\">\n          <div class=\"left\">\n            <div><span>Styling:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div><span>Quality:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div><span>Fit Accuracy:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div><span>Value:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div><span>Satisfaction:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n          </div>\n          <div class=\"right\">\n\n          </div>\n          </div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span class=\"cnt\">(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    <div class=\"navigation\"><span class=\"current\">1</span> of <span class=\"total\">5</span> Reviews</div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data};
+  stack2 = ((stack1 = helpers.each_upto),stack1 ? stack1.call(depth0, depth0.itemAttributes, 5, options) : helperMissing.call(depth0, "each_upto", depth0.itemAttributes, 5, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.supplierWarranty)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                        <div style=\"font-weight:bold\">";
+  if (stack1 = helpers.attrDisplayName) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attrDisplayName; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ":</div>\n                        <div>";
+  if (stack1 = helpers.attributeValue) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attributeValue; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n                        </br>\n                        ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ".. <a href=\"#Review\"> Read more</a></div>\n          <div class=\"rdetails clearfix\">\n          <div class=\"left\">\n            <div><span>Styling:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div><span>Quality:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div><span>Fit Accuracy:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div><span>Value:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div><span>Satisfaction:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n          </div>\n          <div class=\"right\">\n\n          </div>\n          </div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span class=\"cnt\">(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    <div class=\"navigation\"><span class=\"current\">1</span> of <span class=\"total\">5</span> Reviews</div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data};
+  stack2 = ((stack1 = helpers.each_upto),stack1 ? stack1.call(depth0, depth0.itemAttributes, 5, options) : helperMissing.call(depth0, "each_upto", depth0.itemAttributes, 5, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.supplierWarranty)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                        <div style=\"font-weight:bold\">";
+  if (stack1 = helpers.attrDisplayName) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attrDisplayName; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ":</div>\n                        <div>";
+  if (stack1 = helpers.attributeValue) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attributeValue; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n                        </br>\n                        ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ".. <a href=\"#Review\"> Read more</a></div>\n          <div class=\"rdetails clearfix\">\n          <div class=\"left\">\n            <div class=\"clearfix\"><span>Styling:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div class=\"clearfix\"><span>Quality:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div class=\"clearfix\"><span>Fit Accuracy:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div class=\"clearfix\"><span>Value:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div class=\"clearfix\"><span>Satisfaction:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n          </div>\n          <div class=\"right\">\n\n          </div>\n          </div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span class=\"cnt\">(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    <div class=\"navigation\"><span class=\"current\">1</span> of <span class=\"total\">5</span> Reviews</div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data};
+  stack2 = ((stack1 = helpers.each_upto),stack1 ? stack1.call(depth0, depth0.itemAttributes, 5, options) : helperMissing.call(depth0, "each_upto", depth0.itemAttributes, 5, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.supplierWarranty)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                        <div style=\"font-weight:bold\">";
+  if (stack1 = helpers.attrDisplayName) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attrDisplayName; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ":</div>\n                        <div>";
+  if (stack1 = helpers.attributeValue) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attributeValue; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n                        </br>\n                        ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ".. <a href=\"#Review\"> Read more</a></div>\n          <div class=\"rdetails clearfix\">\n          <div class=\"left\">\n            <div class=\"clearfix\"><span>Styling:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div class=\"clearfix\"><span>Quality:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div class=\"clearfix\"><span>Fit Accuracy:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div class=\"clearfix\"><span>Value:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div class=\"clearfix\"><span>Satisfaction:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n          </div>\n          <div class=\"right\">\n             <div><span>Age:</span> 35-45</div>\n             <div><span>Gender:</span> Female</div>\n             <div><span>Ownership:</span> Less Than a Week</div>\n             <div><span>Usage:</span> Every Day</div>\n             <div><span>City:</span> Chicago, IL</div>\n\n\n\n          </div>\n          </div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span class=\"cnt\">(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    <div class=\"navigation\"><span class=\"current\">1</span> of <span class=\"total\">5</span> Reviews</div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data};
+  stack2 = ((stack1 = helpers.each_upto),stack1 ? stack1.call(depth0, depth0.itemAttributes, 5, options) : helperMissing.call(depth0, "each_upto", depth0.itemAttributes, 5, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.supplierWarranty)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                        <div style=\"font-weight:bold\">";
+  if (stack1 = helpers.attrDisplayName) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attrDisplayName; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ":</div>\n                        <div>";
+  if (stack1 = helpers.attributeValue) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attributeValue; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n                        </br>\n                        ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ".. <a href=\"#Review\"> Read more</a></div>\n          <div class=\"rdetails clearfix\">\n          <div class=\"left\">\n            <div class=\"clearfix\"><span>Styling:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div class=\"clearfix\"><span>Quality:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div class=\"clearfix\"><span>Fit Accuracy:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div class=\"clearfix\"><span>Value:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n            <div class=\"clearfix\"><span>Satisfaction:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n          </div>\n          <div class=\"right\">\n             <div><span>Age:</span> 35-45</div>\n             <div><span>Gender:</span> Female</div>\n             <div><span>Ownership:</span> Less Than a Week</div>\n             <div><span>Usage:</span> Every Day</div>\n             <div><span>City:</span> Chicago, IL</div>\n\n\n\n          </div>\n          </div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span class=\"cnt\">(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    <div class=\"navigation\"><span class=\"current\">1</span> of <span class=\"total\">5</span> Reviews</div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['filters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return " <ul class=\"nav nav-pills \" >\n     <li ><label>Type</label>\n         <select id = \"typeList\">\n            <option value = \"All\">All</option>\n            <option value = \"LCD\">LCD</option>\n            <option value = \"LED-LCD\">LED-LCD</option>\n            <option value = \"Plasma\">Plasma</option>\n         </select></li>\n     <li><label>Brand</label>\n          <select id = \"brandList\">\n             <option value = \"All\">All</option>\n             <option value = \"2\">Samsung</option>\n             <option value = \"3\">VIZIO </option>\n             <option value = \"4\">RCA</option>\n             <option value = \"5\">Sceptre</option>\n             <option value = \"6\">Element</option>\n             <option value = \"7\">HANNspree</option>\n             <option value = \"8\">Proscan</option>\n             <option value = \"9\">Sony </option>\n             <option value = \"10\">Emerson</option>\n          </select></li>\n     <li ><label>Sort</label>\n          <select id = \"sortList\">\n             <option value = \"1\">Default</option>\n             <option value = \"2\">Price highest</option>\n             <option value = \"3\">Size</option>\n             <option value = \"4\">Brand</option>\n          </select> </li>\n</ul>\n\n\n";
+  });
+templates['index'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  if (stack1 = helpers.greeting) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.greeting; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " world!";
+  return buffer;
+  });
+templates['items'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li>\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">$";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n		    </li>\n         ";
+  return buffer;
+  }
+
+  buffer += "<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n\n";
+  return buffer;
+  });
+templates['product/about'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n<span>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.shortDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\">Continue Reading</a></span>\n";
+  return buffer;
+  }
+
+  buffer += "<h3>About</h3>\n";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n";
+  return buffer;
+  });
+templates['product/cartfilters'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<button class=\"btn\">Sign up</button>";
+  });
+templates['product/prodinfo'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n\n<h1 class=\"title\">"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.itemName)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</h1>\n<div class=\"info\"><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span><span class=\"reviews\">109 Reviews</span><span class=\"write\">Write a Review</span><span class=\"question\">Ask a Question</span></div>\n<div class=\"price\">$"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.sellers),stack1 == null || stack1 === false ? stack1 : stack1[0])),stack1 == null || stack1 === false ? stack1 : stack1.currentItemPrice)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</div>\n ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  return buffer;
+  });
+templates['product/productdetails'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  
+  return "\n                    <li class=\"active\"><a href=\"#lA\" data-toggle=\"tab\">Full Description</a></li>\n                    <li><a href=\"#lB\" data-toggle=\"tab\">Specifications</a></li>\n                    <li><a href=\"#lC\" data-toggle=\"tab\">Warranty</a></li>\n                    <li><a href=\"#lD\" data-toggle=\"tab\">Financing</a></li>\n                    <li><a href=\"#lE\" data-toggle=\"tab\">Gifting</a></li>\n		        ";
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, stack2, options;
+  buffer += "\n                <div class=\"tab-content\">\n                    <div class=\"tab-pane active\" id=\"lA\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.longDescription)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "...<a href=\"#Prod-Details\"> Continue Reading</a></p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lB\">\n                        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data};
+  stack2 = ((stack1 = helpers.each_upto),stack1 ? stack1.call(depth0, depth0.itemAttributes, 5, options) : helperMissing.call(depth0, "each_upto", depth0.itemAttributes, 5, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n                    </div>\n                    <div class=\"tab-pane\" id=\"lC\">\n                        <p>"
+    + escapeExpression(((stack1 = ((stack1 = depth0.genericContent),stack1 == null || stack1 === false ? stack1 : stack1.supplierWarranty)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lD\">\n                        <p>Financing goes here</p>\n                    </div>\n                    <div class=\"tab-pane\" id=\"lE\">\n                        <p>Gifting ...</p>\n                    </div>\n                </div>\n                ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                        <div style=\"font-weight:bold\">";
+  if (stack1 = helpers.attrDisplayName) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attrDisplayName; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ":</div>\n                        <div>";
+  if (stack1 = helpers.attributeValue) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.attributeValue; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n                        </br>\n                        ";
+  return buffer;
+  }
+
+  buffer += "           <div class=\"clearfix\" id=\"Prod-Details\">\n                <h3>Product Details</h3>\n                <span class=\"rbtn\"><button class=\"btn\"><span>Have a Question?</span></button></span>\n            </div>\n            <div class=\"tabbable tabs-left\">\n\n          <div class=\"tabbable tabs-left\">\n                <ul class=\"nav nav-tabs\">\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </ul>\n                ";
+  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n            </div>\n\n            </div>\n";
+  return buffer;
+  });
+templates['product/productimages'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n				<li >\n				    <div class=\"imgc\">\n						<a href=\"#\" title=\"image 01\"><img src=\"";
+  if (stack1 = helpers.lgImageSrc) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.lgImageSrc; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"image 01\" border=\"0\"></a>\n					</div>\n				</li>\n			 ";
+  return buffer;
+  }
+
+  buffer += "\n	<div id=\"carImgs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n			<ul>\n			 ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n			</ul>\n		</div>\n		<div class=\"next\" ></div>\n	</div>\n	<div class=\"position\">\n	    <i><i></i></i>\n	</div>\n";
+  return buffer;
+  });
+templates['product/reviews'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n      <li>\n          <div class=\"title\">";
+  if (stack1 = helpers.title) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.title; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n          <div class=\"reviewer\">by<span>";
+  if (stack1 = helpers.customer) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.customer; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span><span class=\"on\">on ";
+  if (stack1 = helpers.date) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.date; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</span> . Verified Purchaser</div>\n          <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n          <div class=\"desc\">";
+  if (stack1 = helpers.review) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.review; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + ".. <a href=\"#Review\"> Read more</a></div>\n          <div class=\"rdetails clearfix\">\n                  <div class=\"left\">\n                    <div class=\"clearfix\"><span>Styling:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n                    <div class=\"clearfix\"><span>Quality:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n                    <div class=\"clearfix\"><span>Fit Accuracy:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n                    <div class=\"clearfix\"><span>Value:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n                    <div class=\"clearfix\"><span>Satisfaction:</span><span class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></span></div>\n                  </div>\n                  <div class=\"right\">\n                     <div><span>Age:</span> 35-45</div>\n                     <div><span>Gender:</span> Female</div>\n                     <div><span>Ownership:</span> Less Than a Week</div>\n                     <div><span>Usage:</span> Every Day</div>\n                     <div><span>City:</span> Chicago, IL</div>\n                  </div>\n          </div>\n\n      </li>\n    ";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>Reviews & Ratings <span class=\"cnt\">(5 Total)</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>Write a Review</span></button></span>\n</div>\n<div class=\"btngrp\">\n<button class=\"btn\"><span>Men & Women</span></button>\n<button class=\"btn\"><span>All Ages</span></button>\n<button class=\"btn\"><span>All Ratings</span></button>\n<button class=\"btn\"><span>By Most Helpful</span></button>\n</div>\n<div class=\"pdcar\" id=\"pdrr\">\n\n	<div id=\"carRRs\" class=\"car\">\n		<div class=\"previous prevdisable\"></div>\n		<div class=\"vpt nav\">\n\n    <ul>\n    ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.rrs) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.rrs; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.rrs) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </ul>\n\n    </div>\n    <div class=\"next\" ></div>\n    <div class=\"navigation\"><span class=\"current\">1</span> of <span class=\"total\">5</span> Reviews</div>\n    </div>\n </div>";
+  return buffer;
+  });
+templates['product/viewedalso'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, self=this, blockHelperMissing=helpers.blockHelperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n		    <li >\n			    <a href=\"";
+  if (stack1 = helpers.url) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.url; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			       <div class=\"imgc\"><img src=\"";
+  if (stack1 = helpers.image) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.image; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\" alt=\"\"></div>\n			       <div class=\"title\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"price\">";
+  if (stack1 = helpers.listPrice) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.listPrice; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n			       <div class=\"rating\"><i><i style=\"width: 80.36%; \"></i></i></div>\n			    </a>\n\n		    </li>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"clearfix\">\n	<h3>People Who Viewed This Item Also Viewed</h3>\n	<span class=\"rbtn\"><button class=\"btn\"><span>See More</span></button></span>\n</div>\n<ul class=\"nav nav-pills\">\n        ";
+  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
+  if (stack1 = helpers.items) { stack1 = stack1.call(depth0, options); }
+  else { stack1 = depth0.items; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  if (!helpers.items) { stack1 = blockHelperMissing.call(depth0, stack1, options); }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n\n</ul>\n\n";
+  return buffer;
+  });
+templates['productPanel'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "\n          <div class=\"pinfo\">\n              <span class=\"close\"></span>\n              <span class=\"title\">title</span>\n          </div>";
+  });
+templates['slider'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<ul class=\"nav nav-pills \">\n    <li ><i class=\"sprite-logoicon\"></i><div class=\"logo\">TVFinder<sup>TM</sup></div></li>\n    <li style=\"margin-left:20px\"><div class=\"slider\"><span>Size</span><div id=\"size-slider\"></div></div></li>\n</ul>\n";
+  });
+templates['summary'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; data = data || {};
+  
+
+
+  return "<div class=\"clearfix\" >\n      <span class=\"clear\">\n            <input type=\"button\" id=\"clear_filters\" value=\"Clear Filters\" style=\"border-radius:5px;background-color:white;\" >\n      </span>\n      <span class=\"results\">\n         <span id=\"count\"> 100 MATCHES </span>FOR TELEVISIONS FITTING THAT CRITERIA\n      </span>\n</div>";
+  });
+})();

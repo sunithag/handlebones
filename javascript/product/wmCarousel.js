@@ -13,20 +13,26 @@
         };
         var options = $.extend(defaults, options);
         return this.each(function () {
-            var divobj = $(this), vptItms = 0,loadImgs = 1, totalItms, curpos = 0, liwidth, divwidth, prevobj, nextobj, imgs, position;
+            var divobj = $(this), vptItms = 0,loadImgs = 1, totalItms, curpos = 0, liwidth, divwidth, prevobj, nextobj, imgs, position,navigation;
             totalItms = $('> .vpt > ul > li', this).length;
             liwidth = $('> .vpt > ul > li:first', divobj).outerWidth(true);
             divwidth = $(divobj).width();
             vptItms = Math.floor((divwidth / liwidth));
     	    prevobj = $('> .previous', divobj);
     	    nextobj = $('> .next', divobj);
+            navigation = $('.navigation', divobj);
             if (totalItms <= vptItms) {
-            	nextobj.css('display', 'none');
+            	//nextobj.css('display', 'none');
+                nextobj.addClass('nextdisable');
             }
            //change this to a better way later
             if(divobj.parent().parent().attr('id') == "pdimages"){
                 $('.position > i').css('width' ,Math.floor(21 * totalItms - 1));
             }
+            if(navigation != null){
+                $('.total', navigation).text(totalItms);
+            }
+
  
             nextobj.click(function () {
             	//Lazy load the images on next arrow click
@@ -34,20 +40,28 @@
             	
             	if ((curpos + (vptItms * 2)) < totalItms) { 
                     	curpos += vptItms;
-                    	prevobj.css('display', 'block');	
+                    	//prevobj.css('display', 'block');
+                        prevobj.removeClass('prevdisable');
+
                     	$('> .vpt > ul > li:nth-child(' + (curpos+vptItms) +')', divobj).css('border', 'none');
                 } else if ((curpos + (vptItms * 2)) > totalItms - 1) {
                     if ((curpos + (vptItms * 2)) == totalItms) {
-                    	prevobj.css('display', 'block');	
+                    	//prevobj.css('display', 'block');
+                        prevobj.removeClass('prevdisable');
+
                     }
                     curpos = totalItms - vptItms;
 
-                    nextobj.css('display', 'none');	
+                    //nextobj.css('display', 'none');
+                    nextobj.addClass('nextdisable');
                 	$('> .vpt > ul > li:nth-child(' + (totalItms) +')', divobj).css('border', 'none');
                 }
                 //$('.position > i > i').width(Math.floor(  ( 100/(totalItms)) * (curpos +1) ) + '%');
 
                 $('.position > i > i').css("margin-left", 21 * curpos);
+                if(navigation != null){
+                    $('.current', navigation).text(curpos+1);
+                }
 
                 $('> .vpt > ul', divobj).stop();
                 $('> .vpt > ul', divobj).animate({
@@ -58,16 +72,22 @@
             prevobj.click(function () {
                 if ((curpos - vptItms) > 0) {
                     curpos -= vptItms;
-                    nextobj.css('display', 'block');	    
+                    //nextobj.css('display', 'block');
+                    nextobj.removeClass('nextdisable');
                 } else if ((curpos - (vptItms * 2)) <= 0) {
                 	if ((curpos - (vptItms * 2)) < 0 && totalItms > vptItms) {
-                		 nextobj.css('display', 'block');
+                		 //nextobj.css('display', 'block');
+                        nextobj.removeClass('nextdisable');
                 	}
                     curpos = 0;
-                    prevobj.css('display', 'none');	    
+                    //prevobj.css('display', 'none');
+                    prevobj.addClass('prevdisable');
                 }
                 //$('.position > i > i').width(Math.floor(  ( 100/(totalItms)) * (curpos +1) ) + '%');
                 $('.position > i > i').css("margin-left", 21 * curpos);
+                if(navigation != null){
+                    $('.current', navigation).text(curpos+1);
+                }
                 $('> .vpt > ul', divobj).stop();
                 $('> .vpt > ul', divobj).animate({
                     'marginLeft': -(curpos * liwidth)

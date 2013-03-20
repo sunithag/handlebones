@@ -39,7 +39,7 @@
     width: 100%;
 }
 #pdrr .car .vpt{
-    height:400px;
+    height:415px;
 }
 
 .pdcar .car ul {
@@ -53,8 +53,8 @@
     width:500px;
     height:500px;
     float:left;
-    padding-right:180px;
-    margin-left:180px;
+    padding-right:212px;
+    margin-left:212px;
 }
 
 #pdrr .car ul li {
@@ -69,7 +69,7 @@
 .pdcar .title{
     font-size: 20px;
     font-weight: normal;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 }
 
 .pdcar .reviewer{
@@ -92,6 +92,49 @@
     line-height: 23px;
     color: #7E7E7E;
     font-weight: normal;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EEE;
+}
+
+.pdcar .rdetails{
+    color: #7E7E7E;
+    font-size: 14px;
+}
+
+.pdcar .rdetails .left,
+.pdcar .rdetails .right{
+    width:302px;
+    padding: 30px 0;
+}
+
+.pdcar .rdetails .left{
+    border-right:1px solid #EEE;
+}
+
+.pdcar .rdetails .left div,
+.pdcar .rdetails .right div{
+    margin-bottom:10px;
+}
+
+.pdcar .rdetails .left span:first-child{
+    float:left;
+}
+.pdcar .rdetails .rating{
+    padding-left:10px;
+    width:54%;
+    float:right;
+    margin-top:-5px;
+}
+.pdcar .rdetails .right{
+    padding-left:30px;
+}
+
+.pdcar .rdetails .right span{
+    font-weight: bold;
+}
+
+.pdcar .desc a{
+    font-size:14px;
 }
 
 .pdcar .imgc {
@@ -174,7 +217,6 @@
 
 
 .pdcar .car .previous {
-    display:none;
     height:52px;
     width:31px;
     background:url('../../images/product/arrow-left.png');
@@ -187,12 +229,23 @@
     vertical-align:baseline;
 
 }
+.pdcar .car .prevdisable {
+    background:url('../../images/product/arrow-left-gray.png');
+    cursor: default;
+
+}
+
 
 #pdrr .car .previous {
-    top:300px;
+    top:274px;
     left:35px;
     width:27px;
     background:url('../../images/product/arrow-left1.png');
+}
+
+#pdrr .car .prevdisable {
+    background:url('../../images/product/arrow-left-gray1.png');
+    cursor: default;
 }
 
 .pdcar .car .next {
@@ -211,14 +264,22 @@
 
 }
 
+.pdcar .car .nextdisable {
+    background:url('../../images/product/arrow-right-gray.png') no-repeat;
+    cursor: default;
+}
 
-#pdrr .car .next {
-    top:300px;
+#pdrr .car .next{
+    top:274px;
     left:863px;
-    width:27px;
+    width:33px;
     background:url('../../images/product/arrow-right1.png') no-repeat;
 }
 
+#pdrr .car .nextdisable {
+    background:url('../../images/product/arrow-right-gray1.png') no-repeat;
+    cursor: default;
+}
 .position{
 }
 
@@ -230,4 +291,18 @@
 .position > i  > i {
     display: inline-block; height: 13px; width:13px;margin-left:0px;
     background: url(../../images/product/cur-pos2.png) repeat-x;
+}
+
+
+.pdcar .navigation{
+    color:#767778;
+    display:block;
+    position:absolute;
+    top:535px;
+    left:382px;
+    font-size: 16px;
+}
+
+.pdcar span{
+    font-weight: bold;
 }

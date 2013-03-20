@@ -1,8 +1,16 @@
-
 .head{
-    background-color:white;
     padding-bottom:10px;
-    border-bottom:1px solid #EEE;
+    padding-left:10px;
+    border-bottom:2px solid #E8E8E8;
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(247,247,247,1) 1%, rgba(241,241,241,1) 42%, rgba(242,242,242,1) 67%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(1%,rgba(247,247,247,1)), color-stop(42%,rgba(241,241,241,1)), color-stop(67%,rgba(242,242,242,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(247,247,247,1) 1%,rgba(241,241,241,1) 42%,rgba(242,242,242,1) 67%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(247,247,247,1) 1%,rgba(241,241,241,1) 42%,rgba(242,242,242,1) 67%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(247,247,247,1) 1%,rgba(241,241,241,1) 42%,rgba(242,242,242,1) 67%,rgba(255,255,255,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(247,247,247,1) 1%,rgba(241,241,241,1) 42%,rgba(242,242,242,1) 67%,rgba(255,255,255,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+
 }
 
 .head ul{
@@ -20,13 +28,12 @@
 }
 .head .pull-right li span{
     white-space:nowrap;
-    font-family:Arial;
-    font-weight:bold;
+    font-size:16px;
     color:#666;
 }
 .head .pull-right li div{
-    font: normal 11px Verdana,sans-serif;
-    color:lightgrey;
+    font: normal 16px "Custom";
+    color:#BEC3CA;
     margin-top:5px;
 }
 .head .pull-right li a{
@@ -47,20 +54,30 @@
 
 
 .head input[type="search"]{
-    margin-top:5px;
-    padding:7px 7px 7px 30px;
-    border: 1px solid #cccccc;
-    border-radius:6px;
-    font-family:Arial;
-    font-size:18px;
-    background: transparent url(../../images/spyglass.png) no-repeat 0 center;
+    margin:5px 0 0 10px;
+    padding:10px 10px 10px 35px;
+    border: 1px solid #A8A8A8;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -moz-box-shadow:    inset 0 0 6px #A8A8A8;
+    -webkit-box-shadow: inset 0 0 6px #A8A8A8;
+    box-shadow:         inset 0 0 6px #A8A8A8;
+    font-family:"Custom";
+    font-size:1.6em;
+    vertical-align: middle;
+    background: transparent url(../../images/spyglass.png) no-repeat 4px 6px;
+    width:195px;
 }
+
+
 .bc{
     background: #fff;
     display: block;
     padding: 0px 24px;
     margin: 10px 0 0;
     line-height: 1em;
+    font-size: 14px;
 }
 
 .bc span {
@@ -73,7 +90,6 @@
 }
 
 .hero {
-    font-family:Arial;
     text-align:center;
     vertical-align:middle;
     margin-bottom:40px;
@@ -84,7 +100,7 @@
     font-size:35px;
 }
 .hero p{
-    color:#acacac;
+    color:#7E7E7E;
     font-size:19px;
     font-weight:normal;
 }
@@ -127,42 +143,61 @@
     width:206px;
 }
 
+.items .imgc{
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
 .items .title{
     display: block;
-    color: #555;
-    font-size: 12px;
+    color: #08C;
+    font-size: 16px;
     overflow: hidden;
     white-space: nowrap;
-    font-weight: bold;
     padding-top: 10px;
     text-align: center;
-    width: 200px;
+    width: 180px;
     text-overflow: ellipsis;
 }
+
+
 
 .items .price{
     display: block;
     color: #000;
-    font-size: 16px;
+    font-size: 20px;
     overflow: hidden;
     white-space: nowrap;
     font-weight: bold;
-    padding-top: 10px;
-    text-align: center;
+    padding-top: 15px;
     width: 200px;
+    line-height: 22px;
+    text-align: left;
 }
 
+
 .items .desc{
-    font: normal 11px Verdana,sans-serif;
-    color: lightGrey;
+    font-size: 13px;
+    color: #BBB;
     overflow: hidden;
     white-space: nowrap;
     padding-top: 10px;
-    text-align: center;
-    width: 200px;
+    text-align: left;
+    width: 180px;
     text-overflow: ellipsis;
 }
 
+.rating > i {
+    display: block; height: 16px; width: 90px; margin-top: 8px;
+    background: url(../../images/product/starsl.png) repeat-x;
+}
+
+.rating > i  > i {
+    display: block; height: 16px;
+    background: url(../../images/product/starsh.png) repeat-x;
+}
 .filters{
     border-bottom:1px solid #EEE;
     margin-bottom:20px;
@@ -174,7 +209,6 @@
 .filters li{
     padding-right:20px;
     text-align:left;
-    font-family:Arial;
     font-size:16px;
     color:#666;
 }
@@ -195,7 +229,7 @@
     margin-top:60px;
 }
 .filters .logo{
-    color:#0e79be;
+    color:#08c;
     font-size:16px;
 
 }
@@ -205,6 +239,7 @@
     margin-right:20px;
 }
 .summary .results{
+    font-size: 14px;
     float:left;
     margin-left:20px;
 }
@@ -251,7 +286,7 @@
     width:300px; padding: 10px 10px; margin:0px 5px; bottom:0;
     border: 1px solid #cccccc;
     border-radius: 8px 8px 8px 8px;
-    font-family:Arial; font-size:16px;
+    font-size:16px;
 }
 
 .footer .signup .email {
@@ -303,12 +338,12 @@
 }
 
 .foot .col a {
-    color:#fff; font-family:"Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif; font-size:12px;
+    color:#fff;  font-size:12px;
     line-height:20px;
 }
 
 .foot .col.centre a {
-    color:#fff; font-family:"Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif; font-size:26px; white-space:nowrap;
+    color:#fff;  font-size:26px; white-space:nowrap;
 }
 
 

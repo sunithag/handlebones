@@ -81,7 +81,7 @@ var reviews = [
         "date":"06/27/2012",
         "isVerified":"true",
         "rating":"4",
-        "review":"I am quite happy so far with my purchase. The picture is clear and crisp and no lag time I can see. It does take a couple seconds to come on, and a second or two between channels, but that's my only complaint other than the sound.Do not get this without a home theater system. The sound on the set alone is not sufficient. I got this in a bundle with the home theater and upconvert DVD and I'm quite happy with the sound I'm getting with that however.So if you already have one or are getting surround sound with this, it's a great deal for an excellent picture, no glare & wide viewing angle.",
+        "review":"I am quite happy so far with my purchase. The picture is clear and crisp and no lag time I can see. It does take a couple seconds to come on, and a second or two between channels, but that's my only complaint other than the sound.Do not get this without a home theater system.  ",
         "value":"5",
         "meetsexpectations":"4",
         "picturequality":"5",

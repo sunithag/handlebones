@@ -22,10 +22,10 @@
     border-right: 1px solid #CCC;
     padding-bottom: 10px;
 }
- /*   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(#CCC));
-    background-size:1px 100%;
-    background-position:100% 0, 0 0;
-    background-repeat:no-repeat;
+/*   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(#CCC));
+   background-size:1px 100%;
+   background-position:100% 0, 0 0;
+   background-repeat:no-repeat;
 }*/
 
 .items li .imgc{
@@ -35,8 +35,8 @@
     margin-left:-10px;
 }
 .items li:last-child{
-  border:none;
-  background: none;
+    border:none;
+    background: none;
 }
 
 .items .title{
@@ -73,7 +73,7 @@
     overflow: hidden;
     white-space: nowrap;
     padding-top: 10px;
-    text-align: left;
+    text-align: center;
     width: 250px;
     text-overflow: ellipsis;
 }

@@ -1,11 +1,12 @@
-<ul class="nav nav-pills cccc">
+<ul class="nav nav-pills">
         {{#items}}
 		    <li>
 			    <a href="{{url}}">
-			       <img src="{{image}}" alt="">
+			       <div class="imgc"><img src="{{image}}" alt=""></div>
 			       <div class="title">{{name}}</div>
 			       <div class="desc">{{description}}</div>
 			       <div class="price">${{listPrice}}</div>
+			       <div class="rating"><i><i style="width: 80.36%; "></i></i></div>
 			    </a>
 		    </li>
          {{/items}}

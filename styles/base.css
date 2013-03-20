@@ -215,7 +215,8 @@ a:focus {
 }
 
 .container,
-.container-wide
+.container-wide,
+.container-narrow
 {
     margin-right: auto;
     margin-left: auto;
@@ -224,6 +225,10 @@ a:focus {
 }
 .container-wide{
     width:1024px;
+}
+
+.container-narrow{
+    width:768px;
 }
 .container:before,
 .container:after,

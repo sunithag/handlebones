@@ -208,9 +208,9 @@ $(function() {
         *
         */
 
-       var itemAttributes = $(data[0].itemAttributes).splice($(data[0].itemAttributes).length - 5)
+       //var itemAttributes = $(data[0].itemAttributes).splice($(data[0].itemAttributes).length - 5)
 
-       var model = new Backbone.Model({items:itemAttributes});
+       var model = new Backbone.Model({items:data});
 
        var productDetailsView = Backbone.View.extend({
 
@@ -235,6 +235,7 @@ $(function() {
 
     function processTVData(data){
         console.log("processing TV Data");
+        Application.setData(data, "wmtTVs");
 
         /**
          * People viewed also view

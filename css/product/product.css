@@ -71,7 +71,7 @@
 }
 
 .productcontainer{
-    margin: 50px 50px 10px;
+    margin: 20px 50px 10px;
 }
 
 .product{
@@ -116,7 +116,7 @@
 }
 
 .rating > i {
-    display: inline-block; height: 16px; width: 90px; margin-top: 8px;
+    display: inline-block; height: 16px; width: 90px; margin-top: 5px;
     background: url(../../images/product/starsl.png) repeat-x;
 }
 
@@ -297,39 +297,5 @@ font-weight: normal;
     padding-right: 23px;
 
 }
-.drop-shadow {
-    position:relative;
-    margin:-30px 0px 40px 0px;
-    background:#fff;
-}
 
-.drop-shadow:before,
-.drop-shadow:after {
-    content:"";
-    position:absolute;
-    z-index:-2;
-}
-
-.drop-shadow p {}
-
-.curved:before {
-    top:10px;
-    bottom:10px;
-    left:0;
-    right:50%;
-    -webkit-box-shadow:0 0 15px rgba(0,0,0,0.6);
-    -moz-box-shadow:0 0 15px rgba(0,0,0,0.6);
-    box-shadow:0 0 15px rgba(0,0,0,0.6);
-    -moz-border-radius:10px / 100px;
-    border-radius:10px / 100px;
-}
-
-.curved-hz-1:before {
-    top:50%;
-    bottom:0;
-    left:20px;
-    right:20px;
-    -moz-border-radius:100px / 10px;
-    border-radius:100px / 10px;
-}
 
