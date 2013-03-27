@@ -38,7 +38,7 @@ $(function() {
     var storedData = JSON.parse(sessionStorage.getItem('itemid -'+ itemid));
 
     var storedTvs = JSON.parse(sessionStorage.getItem('wmtTVs'));
-    //var url = 'http://aguevara-linux.corp.walmart.com/search/catalog/itemIds.ems?itemids=' + itemid;
+
     var url =  'http://localhost:8000/json/product/item-data/item-'+itemid+'.json';
 
     if ( storedData !== null) {

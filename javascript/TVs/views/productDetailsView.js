@@ -32,8 +32,12 @@ Application.productDetailsView = Application.View.extend({
         //this.options.cartCollection.bind("add", this.addItem);
 
         //get item info and add to the CartItemCollection and add it to the local storage
-        this.options.cartCollection.add(this.product.attributes[0], {silent: true});
 
+
+        var key = 'cartWM';
+
+        Application.setData (this.options.cartCollection.models, key);
+        this.options.cartCollection.add(this.product.attributes[0], {silent: true});
 
         //close the product panel
         this.$el.css("display","none");

@@ -25,6 +25,12 @@ Application.router = Backbone.Router.extend({
     }
 })
 
+Application.setData = function(data, key){
+
+    localStorage.setItem(key, JSON.stringify(data));
+
+}
+
 var slider;
 
 var range = [0,0];
@@ -40,6 +46,7 @@ Application.updateTVs.on("change", function(collection) {
 
         this.collection = collection
         this.newArray = this.collection.originalModels;
+
 
         var type = $("#typeList :selected").text();
         var brand = $("#brandList :selected").text();
@@ -83,6 +90,9 @@ $(function() {
 
     var AppRouter = new Application.router;
     var cartCollection = new Application.CartItemCollection();
+
+    var storedCartData= JSON.parse(localStorage.getItem('cartWM'));
+    cartCollection.add(storedCartData, {silent: true});
 
     //read items from the storage and assign them to cartCollection
 
