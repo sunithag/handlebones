@@ -92,6 +92,7 @@ $(function() {
 
     })
 
+    //actually Route is not needed for overlay - only different state of the page
     AppRouter.on('route:productDetail', function(id) {
 
         var view = new Application.productDetailsView({ template: Handlebars.templates['productPanel'], id:id, cartCollection:cartCollection});

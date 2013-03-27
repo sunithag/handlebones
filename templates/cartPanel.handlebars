@@ -14,11 +14,12 @@
      <hr>
      <details open>
            <summary>1 item for Purchase</summary>
+        {{#items}}
            <div class="clearfix">
-               <div class="imgc"><img src="http://i.walmartimages.com/i/p/00/03/67/25/23/0003672523744_60X60.gif" alt=""></div>
+               <div class="imgc"><img src="{{attributes.alternateImageData.0.imageSrc}}" alt=""></div>
                <div class="info">
                     <div class="title">
-                        Samsung 46\" Class LED 1080p 60Hz HDTV, UN46EH5000
+                        {{attributes.genericContent.itemName}}
                     </div>
                      <button class="btn save"><span>Save for Later</span></button>
                      <button class="btn"><span>Remove</span></button>
@@ -32,6 +33,7 @@
                     <div class="orig">239.98</div>
                </div>
            </div>
+          {{/items}}
      </details>
      <hr>
      <details>
