@@ -1,0 +1,314 @@
+.pdcar{
+    background:#fff;
+    position:relative;
+    overflow:hidden;
+    margin:0 auto 20px;
+
+}
+
+#pdimages{
+    height:535px;
+}
+
+#pdrr {
+
+
+}
+.pdcar .car {
+    position:relative;
+    text-align:center;
+
+}
+
+#pdrr .car {
+    position: relative;
+    text-align: center;
+    background: #eee;
+    border-top:1px solid #ccc;
+    padding:70px;
+    height: 470px;
+
+}
+.pdcar .car .vpt{
+    clear: both;
+    float: left;
+    height:500px;
+    background: #FFF;
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+}
+#pdrr .car .vpt{
+    height:470px;
+}
+
+.pdcar .car ul {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    text-align:center;
+}
+.pdcar .car ul li {
+    width:500px;
+    height:500px;
+    float:left;
+    margin-left:91px;
+}
+
+#pdrr .car ul li {
+    width:481px;
+    height:500px;
+    float:left;
+    padding:30px;
+    margin:0;
+    text-align: left;
+}
+
+.pdcar .title{
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 7px;
+}
+
+.pdcar .reviewer{
+    color: #7E7E7E;
+    font-size: 14px;
+}
+
+.pdcar .reviewer span{
+   margin-left: 5px;
+    color:#08C;
+}
+.pdcar .reviewer .on{
+    margin-left: 5px;
+    color: #7E7E7E;
+}
+
+.pdcar .desc{
+    margin-top:30px;
+    font-size: 14px;
+    line-height: 23px;
+    color: #7E7E7E;
+    font-weight: normal;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EEE;
+}
+
+.pdcar .rdetails{
+    color: #7E7E7E;
+    font-size: 14px;
+}
+
+.pdcar .rdetails .left,
+.pdcar .rdetails .right{
+    width:240px;
+    padding: 30px 0;
+}
+.pdcar .rdetails .right{
+    width:210px;
+}
+
+.pdcar .rdetails .left{
+    float:left;
+    border-right:1px solid #EEE;
+}
+
+.pdcar .rdetails .left div,
+.pdcar .rdetails .right div{
+    margin-bottom:10px;
+}
+
+.pdcar .rdetails .left span:first-child{
+    float:left;
+}
+.pdcar .rdetails .rating{
+    padding-left:10px;
+    width:54%;
+    float:right;
+    margin-top:-5px;
+}
+.pdcar .rdetails .right{
+    float:right;
+    padding-left:30px;
+}
+
+.pdcar .rdetails .right span{
+    font-weight: bold;
+}
+
+.pdcar .desc a{
+    font-size:14px;
+}
+
+.pdcar .imgc {
+    width:500px;
+    height:500px;
+    overflow:hidden;
+    cursor: pointer;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+
+}
+
+
+
+
+.pdcar .hlf,
+.pdcar .hrt{
+    float: left;
+}
+
+.pdcar .hlf .head{
+    font:500 17px "myriad-pro",Arial,Helvetica,Sans-Serif;
+    color:#333;
+    white-space:nowrap;
+    text-align:center;
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 500;
+
+}
+
+.pdcar .hrt .car .vpt{
+    width:769px;
+
+}
+
+.pdcar .hrt .head{
+    font:500 17px "myriad-pro",Arial,Helvetica,Sans-Serif;
+    color:#333;
+    white-space:nowrap;
+    text-align:left;
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.pdcar .hrt .head a{
+
+    font-family:arial;
+    font-size:13px;
+    color:#1A75CF;
+    font-weight:bold;
+    margin-left: 5px;
+}
+
+.pdcar .hrt .head a i{
+    display:inline-block;
+    border-bottom:4px solid transparent;
+    border-left:4px solid #1a75cf;
+    border-top: 4px solid transparent;
+    height:0;
+    width:0;
+}
+.pdcar .hlf .car li{
+    border-right:1px dotted #CCC;
+    padding-right:5px;
+    margin-right:5px;
+    margin-left:10px;
+    width:161px;
+    height: 240px;
+
+}
+
+.pdcar .hrt .car .vpt,
+.pdcar .hlf .car .vpt{
+    height:240px;
+}
+
+
+.pdcar .car .previous {
+    height:52px;
+    width:31px;
+    background:url('../../images/product/arrow-left.png');
+    margin:0;
+    padding:0;
+    position:absolute;
+    top:190px;
+    cursor: pointer;
+    left:1px;
+    vertical-align:baseline;
+
+}
+.pdcar .car .prevdisable {
+    background:url('../../images/product/arrow-left-gray.png');
+    cursor: default;
+
+}
+
+
+#pdrr .car .previous {
+    top:274px;
+    left:21px;
+    width:27px;
+    background:url('../../images/product/arrow-left1.png');
+}
+
+#pdrr .car .prevdisable {
+    background:url('../../images/product/arrow-left-gray1.png');
+    cursor: default;
+}
+
+.pdcar .car .next {
+
+    display:block;
+    height:52px;
+    width:31px;
+    background:url('../../images/product/arrow-right.png') no-repeat;
+    margin:0;
+    padding:0;
+    position:absolute;
+    top:190px;
+    cursor: pointer;
+    right:0;
+    vertical-align:baseline;
+
+}
+
+.pdcar .car .nextdisable {
+    background:url('../../images/product/arrow-right-gray.png') no-repeat;
+    cursor: default;
+}
+
+#pdrr .car .next{
+    top:274px;
+    left:630px;
+    width:33px;
+    background:url('../../images/product/arrow-right1.png') no-repeat;
+}
+
+#pdrr .car .nextdisable {
+    background:url('../../images/product/arrow-right-gray1.png') no-repeat;
+    cursor: default;
+}
+
+
+.position{
+}
+
+.position > i {
+    display: inline-block; height: 13px; width: 100px; margin-top: 15px;
+    background: url(../../images/product/car-pos2.png) repeat-x;
+}
+
+.position > i  > i {
+    display: inline-block; height: 13px; width:13px;margin-left:0px;
+    background: url(../../images/product/cur-pos2.png) repeat-x;
+}
+
+
+.pdcar .navigation{
+    color:#767778;
+    display:block;
+    position:absolute;
+    top:565px;
+    left:305px;
+    font-size: 16px;
+}
+
+.pdcar span{
+    font-weight: bold;
+}

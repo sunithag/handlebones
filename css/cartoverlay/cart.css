@@ -1,0 +1,169 @@
+.cartContainer{
+    margin: 20px;
+}
+
+.citems{
+    margin-bottom:20px;
+}
+
+.citems .left{
+    float:left;
+}
+
+.citems .left h1 {
+    display:inline-block;
+    margin: 5px 15px 0 0;
+}
+
+.citems .left select{
+    color:#555;
+    font-size: 18px;
+    border-radius: 6px;
+    display:inline-block;
+    margin-top: -12px;
+}
+
+.citems .title {
+    color: #555;
+    font-size: 23px;
+    font-weight: normal;
+
+}
+
+
+details, summary {
+    display: block;
+
+    padding: 5px 5px 15px 5px;
+    color: #08C;
+    font-size: 16px;
+}
+
+details .btn{
+    font-size: 12px;
+}
+
+details .save {
+    background: #08c;
+    color:#fff;
+}
+details .imgc {
+    float: left;
+    margin-right: 30px;
+}
+details .info{
+
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+details .title{
+
+    margin-right: 20px;
+    white-space: normal;
+    height: 28px;
+    width: 230px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+details .qty{
+
+    float: left;
+    margin-right: 30px;
+    margin-top:15px;
+
+}
+
+details .qty legend{
+    margin-left:-5px;
+    padding-bottom:5px;
+    color: #BEC3CA;
+    font-size: 12px;
+}
+
+details .qty input{
+    text-align: center;
+}
+details .prc{
+
+}
+
+details .prc .list{
+    font-size: 12px;
+    font-weight:normal;
+    color:#000000;
+    text-decoration: line-through;
+    margin-bottom:10px;
+}
+
+details .prc .orig{
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+summary {
+
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    margin:18px 0;
+    position:relative;
+    background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0) 90%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(10%,rgba(0,0,0,0)), color-stop(50%,rgba(0,0,0,0.65)), color-stop(90%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+}
+
+hr:before {
+    content: "";
+    display: block;
+    border-top: solid 1px #f9f9f9;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+}
+
+.cartContainer .subtotal{
+    text-align: right;
+    line-height: 21px;
+}
+
+.cartContainer .subtotal span{
+    margin-right:20px;
+}
+
+.cartContainer .subtotal .ttl{
+    color: #555;
+    font-size: 23px;
+    font-weight: normal;
+}
+
+.cartContainer .subtotal .prc{
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+
+}
+
+
+.cartContainer .subtotal .btn{
+
+    background: #fdb23b;
+    color:#fff;
+}
+.cartContainer .subtotal .cobtn .btn span{
+    background: url(../../images/product/btn-arr.png) center right no-repeat;
+    padding-right: 23px;
+    margin-right:5px;
+}

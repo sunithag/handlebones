@@ -4,9 +4,16 @@
     <link rel="stylesheet" media="screen" href="styles/jquery-ui-1.10.1.min.css"/>
     <link rel="stylesheet" media="screen" href="css/TVs/index.css"/>
     <link rel="stylesheet" media="screen" href="css/common/navstyles.css"/>
+
+      <link rel="stylesheet" media="screen" href="../css/productoverlay/product.css"/>
+      <link rel="stylesheet" media="screen" href="../css/productoverlay/carousel.css"/>
+      <link rel="stylesheet" media="screen" href="../css/productoverlay/buttons.css"/>
+      <link rel="stylesheet" media="screen" href="../css/productoverlay/reviews.css"/>
+
+      <link rel="stylesheet" media="screen" href="../css/cartoverlay/cart.css"/>
   </head>
   <body>
-  <div class="container">
+  <div class="container-wide">
   <header class="head clearfix">
      <ul class="nav nav-pills pull-right">
        <li><a><i class="sprite-create"></i><span >Create</span></a><div>a new wishlist</div> </li>
@@ -104,10 +111,10 @@
       </footer>
       <div id="productOverlay">
 
-          <div class="pinfo">
-              <span class="close"></span>
-              <span class="title">title</span>
-          </div>
+      </div>
+
+      <div id="cartOverlay">
+
       </div>
 </div>
 </body>
@@ -119,5 +126,30 @@
   <script src="lib/jquery-ui-1.10.1.min.js"></script>
   <script src="templates.js"></script>
   <script src="javascript/TVs/application.js"></script>
+  <script src="javascript/TVs/models/ProductModel.js"></script>
+  <script src="javascript/TVs/collections/TVFinderCollection.js"></script>
+  <script src="javascript/TVs/views/TVFinderView.js"></script>
+  <script src="javascript/TVs/views/ItemsView.js"></script>
+  <script src="javascript/TVs/views/SliderView.js"></script>
+  <script src="javascript/TVs/views/FilterView.js"></script>
+  <script src="javascript/TVs/views/SummaryView.js"></script>
+  <script src="javascript/TVs/views/productDetailsView.js"></script>
+
+
+  <script src="../lib/bootstrap.tabs.min.js"></script>
+  <script src="../javascript/product/wmCarousel.js"></script>
+  <script src="../javascript/product/reviews.js"></script>
+  <script src="javascript/TVs/views/product/AboutView.js"></script>
+  <script src="javascript/TVs/views/product/DetailsView.js"></script>
+  <script src="javascript/TVs/views/product/ImageCarouselView.js"></script>
+  <script src="javascript/TVs/views/product/InfoView.js"></script>
+  <script src="javascript/TVs/views/product/RelevanceView.js"></script>
+  <script src="javascript/TVs/views/product/RRView.js"></script>
+
+  <script src="javascript/TVs/collections/CartItemCollection.js"></script>
+  <script src="javascript/TVs/collections/SavedItemCollection.js"></script>
+  <script src="javascript/TVs/views/CartDetailsView.js"></script>
+
+
 
 </html>

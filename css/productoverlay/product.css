@@ -1,0 +1,132 @@
+.productcontainer{
+    margin: 20px;
+}
+
+.product{
+    margin-bottom:20px;
+}
+.product .title {
+    color: #333;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin:0;
+    padding:0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width:570px;
+    line-height: 26px;
+    overflow: hidden;
+    display:inline-block;
+
+}
+.product .info{
+    margin-bottom: 15px;
+}
+
+.product .rating > i {
+    display: inline-block; height: 16px; width: 90px; margin-top: 5px;
+    background: url(../../images/product/starsl.png) repeat-x;
+}
+
+.product .rating > i  > i {
+    display: inline-block; height: 16px;
+    background: url(../../images/product/starsh.png) repeat-x;
+}
+.product .reviews,
+.product .write,
+.product .question
+{
+    padding-right:8px;
+    margin-left:8px;
+    border-right:2px solid #0f80c2;
+    font-size:16px;
+    font-weight: bold;
+    color:#0f80c2;
+}
+.product .question {
+    border:none;
+}
+
+.product .price{
+    font-size:28px;
+    font-weight: bold;
+    color:#000000;
+    margin-bottom:20px;
+}
+
+
+.product .icar{
+    text-align: center;
+    vertical-align: middle;
+    width:500px;
+    height:500px;
+    overflow:hidden;
+    width:924px;
+
+}
+
+.pdetails{
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 20px;
+}
+
+.pdetails li{
+
+font-size: 22px;
+border-radius: 0;
+font-weight: normal;
+}
+
+.pdetails li a{
+    padding:20px;
+}
+
+.pdetails .tab-content {
+    font-size: 16px;
+    line-height: 23px;
+    color: #7E7E7E;
+    font-weight: normal;
+}
+
+.pdetails .tab-content p{
+    margin: 10px 0 20px 30px;
+}
+.pdetails h3{
+    margin-bottom: 40px;
+    float: left;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.rbtn{
+    display: block;
+    padding-right: 10px;
+    padding-top: 7px;
+   float: right;
+    margin-top: 5px;
+}
+
+.btn {
+    font-size: 17px;
+    border-radius: 9px;
+    padding: 5px 10px;
+    background: white;
+    color:#7E7E7E;
+    border: 1px outset #B8B8B8;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255, 255, 255, 1)), color-stop(47%,rgba(246, 246, 246, 1)), color-stop(100%,rgba(237, 237, 237, 1)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%,rgba(246, 246, 246, 1) 47%,rgba(237, 237, 237, 1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%,rgba(246, 246, 246, 1) 47%,rgba(237, 237, 237, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%,rgba(246, 246, 246, 1) 47%,rgba(237, 237, 237, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%,rgba(246, 246, 246, 1) 47%,rgba(237, 237, 237, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+
+}
+
+.rbtn .btn span {
+    background: url(../../images/product/btn-arr.png) center right no-repeat;
+    padding-right: 23px;
+
+}
+
+

@@ -1,11 +1,11 @@
 <ul class="nav nav-pills">
         {{#items}}
 		    <li>
-			    <a href="{{url}}">
-			       <div class="imgc"><img src="{{image}}" alt=""></div>
-			       <div class="title">{{name}}</div>
-			       <div class="desc">{{description}}</div>
-			       <div class="price">${{listPrice}}</div>
+			    <a href="{{attributes.url}}">
+			       <div class="imgc"><img src="{{attributes.image}}" alt=""></div>
+			       <div class="title">{{attributes.name}}</div>
+			       <div class="desc">{{attributes.description}}</div>
+			       <div class="price">${{attributes.listPrice}}</div>
 			       <div class="rating"><i><i style="width: 80.36%; "></i></i></div>
 			    </a>
 		    </li>

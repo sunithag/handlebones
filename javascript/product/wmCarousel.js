@@ -13,21 +13,25 @@
         };
         var options = $.extend(defaults, options);
         return this.each(function () {
-            var divobj = $(this), vptItms = 0,loadImgs = 1, totalItms, curpos = 0, liwidth, divwidth, prevobj, nextobj, imgs, position,navigation;
+            var divobj = $(this), vptItms = 0,loadImgs = 1, totalItms, curpos = 0, liwidth, divwidth, prevobj, nextobj, imgs, position,navigation,posWidth;
             totalItms = $('> .vpt > ul > li', this).length;
             liwidth = $('> .vpt > ul > li:first', divobj).outerWidth(true);
             divwidth = $(divobj).width();
-            vptItms = Math.floor((divwidth / liwidth));
+           // vptItms = Math.floor((divwidth / liwidth));
+            vptItms = 1;
     	    prevobj = $('> .previous', divobj);
     	    nextobj = $('> .next', divobj);
             navigation = $('.navigation', divobj);
+            position = $('.position', divobj);
             if (totalItms <= vptItms) {
             	//nextobj.css('display', 'none');
                 nextobj.addClass('nextdisable');
             }
            //change this to a better way later
-            if(divobj.parent().parent().attr('id') == "pdimages"){
-                $('.position > i').css('width' ,Math.floor(21 * totalItms - 1));
+            if(position != null){
+                posWidth = Math.floor(21 * totalItms - 1) - 7;
+                $('.position > i', divobj).css('width' , posWidth);
+                $('.position > i > i', divobj).css("margin-right", (21 * curpos) + posWidth);
             }
             if(navigation != null){
                 $('.total', navigation).text(totalItms);
@@ -58,7 +62,7 @@
                 }
                 //$('.position > i > i').width(Math.floor(  ( 100/(totalItms)) * (curpos +1) ) + '%');
 
-                $('.position > i > i').css("margin-left", 21 * curpos);
+                $('.position > i > i', divobj).css("margin-left", 21 * curpos);
                 if(navigation != null){
                     $('.current', navigation).text(curpos+1);
                 }
@@ -84,7 +88,7 @@
                     prevobj.addClass('prevdisable');
                 }
                 //$('.position > i > i').width(Math.floor(  ( 100/(totalItms)) * (curpos +1) ) + '%');
-                $('.position > i > i').css("margin-left", 21 * curpos);
+                $('.position > i > i', divobj).css("margin-left", 21 * curpos);
                 if(navigation != null){
                     $('.current', navigation).text(curpos+1);
                 }
