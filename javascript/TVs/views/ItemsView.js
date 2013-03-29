@@ -18,13 +18,13 @@ Application.ItemsView = Application.View.extend({
 
         initialize : function(){
             this.collection.on('reset', this.render, this);
-            // this.listenTo(this.model, "change", this.render);
         },
 
         productDetails: function(event){
 
             event.preventDefault();
             event.stopPropagation();
+
             console.log(event.target.nodeName);
             var target = event.target;
 
@@ -36,23 +36,12 @@ Application.ItemsView = Application.View.extend({
 
             console.log("clicked on a product: " + itemid);
 
-            window.location = "http://localhost:8000/#product/" +itemid ;
+            //window.location = "http://localhost:8000/#product/" +itemid ;
 
-            /*  //show Panel
-             var panel = $("#productOverlay" );
-             $("#productOverlay .title").replaceWith(href  + '  itemid:' + itemid);
-             panel.css("display","block");
-             window.scrollTo(0,0);
+            var view = new Application.productDetailsView({ template: Handlebars.templates['productPanel'], id:itemid, cartCollection:this.options.cartCollection});
+            view.render();
 
-             var UserCollection = Backbone.Collection.extend({
 
-             url: 'http://aguevara-linux.corp.walmart.com/search/catalog/itemIds.ems?itemids=' + itemid,
-             parse: function(data) {
-             return data.items;
-             }
-             //will do rest of the code later -
-             });*/
-           // window.location = "http://localhost:8000/product/?itemid=" +itemid ;
 
         }
 });

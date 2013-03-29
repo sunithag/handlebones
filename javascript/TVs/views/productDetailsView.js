@@ -2,8 +2,6 @@ Application.productDetailsView = Application.View.extend({
 
     el: '#productOverlay',
 
-
-
     events: {
 
         'click .close': 'hideOverlay',
@@ -15,29 +13,12 @@ Application.productDetailsView = Application.View.extend({
 
         console.log("in about view ");
 
-
-    /*    this.model.set({
-
-            name : 'bad plan',
-            date : 'friday',
-            desc : 'blah',
-            id : Math.floor(Math.random()*11),
-            total_stops : '2'
-        });
-
-        this.collection.add( this.model );
-
-        */
-
-        //this.options.cartCollection.bind("add", this.addItem);
-
-        //get item info and add to the CartItemCollection and add it to the local storage
-
-
+        //TODO: create GUID for the id
         var key = 'cartWM';
 
-        Application.setData (this.options.cartCollection.models, key);
+
         this.options.cartCollection.add(this.product.attributes[0], {silent: true});
+        Application.setData (this.options.cartCollection.models, key);
 
         //close the product panel
         this.$el.css("display","none");
@@ -52,24 +33,21 @@ Application.productDetailsView = Application.View.extend({
         panel.css("display","block");
         window.scrollTo(0,0);
 
-
-
     },
+
     addItem: function(){
-        _.each(this.cartCollection , function (item) {
+        _.each(this.options.cartCollection , function (item) {
             console.log("add this item to the storage");
         }, this);
     },
 
     render: function (options) {
         var that = this;
-
-
         var context = this.model ? this.model.attributes : {},
             output = this.options.template(context);
         this.$el.html(output);
-        that.product = new Application.ProductModel({id: options.id});
-        this.product.setID(options.id);
+        that.product = new Application.ProductModel({id: this.options.id});
+        this.product.setID(this.options.id);
         that.product.fetch({
                 success: function (data) {
                     that.onDataHandler(data);
@@ -105,8 +83,8 @@ Application.productDetailsView = Application.View.extend({
         var view = new Application.DetailsView ({ template: Handlebars.templates['product/productdetails'], model: model });
         view.render();
 
-        $('#carImgs').wmCarousel({ duration:100});
-        $('#carRRs').wmCarousel({ duration:100});
+        $('#carImgs').wmCarousel({ duration:500});
+        $('#carRRs').wmCarousel({ duration:500});
 
 
         var panel = $("#productOverlay" );

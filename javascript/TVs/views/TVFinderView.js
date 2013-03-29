@@ -17,12 +17,14 @@ Application.TVFinderView = Application.View.extend({
 
     },
 
+
+
     render: function(){
 
         this.collection.originalModels = _.clone(this.collection.models);
 
 
-        var view = new Application.ItemsView({ template: Handlebars.templates['items'],   collection:this.collection});
+        var view = new Application.ItemsView({ template: Handlebars.templates['items'],   collection:this.collection, cartCollection:this.options.cartCollection});
         view.render();
 
         var view = new Application.FilterView({ template: Handlebars.templates['filters'], collection: this.collection });

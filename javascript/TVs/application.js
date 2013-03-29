@@ -20,8 +20,7 @@ Application.View = Backbone.View.extend({
 Application.router = Backbone.Router.extend({
     routes: {
         "": "home",
-        "product/:id": "productDetail",
-        "cart": "cartDetail"
+        "cart": "cartConfirm"
     }
 })
 
@@ -89,12 +88,15 @@ Application.updateTVs.on("change", function(collection) {
 $(function() {
 
     var AppRouter = new Application.router;
+
     var cartCollection = new Application.CartItemCollection();
 
+    //read items from the localstorage and assign them to cartCollection
     var storedCartData= JSON.parse(localStorage.getItem('cartWM'));
-    cartCollection.add(storedCartData, {silent: true});
+    if(storedCartData != null)
+        cartCollection.add(storedCartData, {silent: true});
 
-    //read items from the storage and assign them to cartCollection
+
 
     AppRouter.on('route:home', function() {
 
@@ -103,11 +105,12 @@ $(function() {
     })
 
     //actually Route is not needed for overlay - only different state of the page
-    AppRouter.on('route:productDetail', function(id) {
+  /*  AppRouter.on('route:productDetail', function(id) {
 
         var view = new Application.productDetailsView({ template: Handlebars.templates['productPanel'], id:id, cartCollection:cartCollection});
         view.render({id: id});
     })
+    */
 
     Backbone.history.start();
 

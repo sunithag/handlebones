@@ -220,11 +220,11 @@ a:focus {
 {
     margin-right: auto;
     margin-left: auto;
-    *zoom: 1;
     width:980px;
 }
 .container-wide{
     width:1024px;
+    position:relative;
 }
 
 .container-narrow{
