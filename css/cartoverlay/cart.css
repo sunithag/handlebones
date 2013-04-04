@@ -138,6 +138,7 @@ hr:before {
 .cartContainer .subtotal{
     text-align: right;
     line-height: 21px;
+    position:relative;
 }
 
 .cartContainer .subtotal span{
@@ -148,12 +149,14 @@ hr:before {
     color: #555;
     font-size: 23px;
     font-weight: normal;
+    vertical-align: bottom;
 }
 
 .cartContainer .subtotal .prc{
     font-size: 28px;
     font-weight: bold;
     color: black;
+    vertical-align: bottom;
 
 }
 

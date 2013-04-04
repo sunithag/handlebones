@@ -15,25 +15,9 @@ Application.View = Backbone.View.extend({
 });
 
 
-
-/* routers */
-Application.router = Backbone.Router.extend({
-    routes: {
-        "": "home",
-        "cart": "cartConfirm"
-    }
-})
-
-Application.setData = function(data, key){
-
-    localStorage.setItem(key, JSON.stringify(data));
-
-}
-
 var slider;
 
 var range = [0,0];
-
 /* Events extend */
 
 Application.updateTVs = {};
@@ -47,9 +31,9 @@ Application.updateTVs.on("change", function(collection) {
         this.newArray = this.collection.originalModels;
 
 
-        var type = $("#typeList :selected").text();
-        var brand = $("#brandList :selected").text();
-        var sort = $("#sortList :selected").text();
+        var type = $("#typeList").val();
+        var brand = $("#brandList").val();
+        var sort = $("#sortList").val();
         var matches = $("#count");
 
         this.newArray= _.filter(this.newArray, function (item) {
@@ -83,36 +67,3 @@ Application.updateTVs.on("change", function(collection) {
 
 
 
-
-
-$(function() {
-
-    var AppRouter = new Application.router;
-
-    var cartCollection = new Application.CartItemCollection();
-
-    //read items from the localstorage and assign them to cartCollection
-    var storedCartData= JSON.parse(localStorage.getItem('cartWM'));
-    if(storedCartData != null)
-        cartCollection.add(storedCartData, {silent: true});
-
-
-
-    AppRouter.on('route:home', function() {
-
-        var view = new Application.TVFinderView({cartCollection:cartCollection});
-
-    })
-
-    //actually Route is not needed for overlay - only different state of the page
-  /*  AppRouter.on('route:productDetail', function(id) {
-
-        var view = new Application.productDetailsView({ template: Handlebars.templates['productPanel'], id:id, cartCollection:cartCollection});
-        view.render({id: id});
-    })
-    */
-
-    Backbone.history.start();
-
-
-});

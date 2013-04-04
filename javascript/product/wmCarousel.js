@@ -17,8 +17,7 @@
             totalItms = $('> .vpt > ul > li', this).length;
             liwidth = $('> .vpt > ul > li:first', divobj).outerWidth(true);
             divwidth = $(divobj).width();
-           // vptItms = Math.floor((divwidth / liwidth));
-            vptItms = 1;
+           vptItms = Math.floor((divwidth / liwidth));
     	    prevobj = $('> .previous', divobj);
     	    nextobj = $('> .next', divobj);
             navigation = $('.navigation', divobj);
@@ -27,7 +26,7 @@
             	//nextobj.css('display', 'none');
                 nextobj.addClass('nextdisable');
             }
-           //change this to a better way later
+
             if(position != null){
                 posWidth = Math.floor(21 * totalItms - 1) - 7;
                 $('.position > i', divobj).css('width' , posWidth);

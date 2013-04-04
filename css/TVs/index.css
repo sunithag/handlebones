@@ -1,7 +1,7 @@
 .head{
     padding-bottom:10px;
     padding-left:10px;
-    border-bottom:2px solid #E8E8E8;
+    border-bottom:1px solid #E8E8E8;
     background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(247,247,247,1) 1%, rgba(241,241,241,1) 42%, rgba(242,242,242,1) 67%, rgba(255,255,255,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(1%,rgba(247,247,247,1)), color-stop(42%,rgba(241,241,241,1)), color-stop(67%,rgba(242,242,242,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(247,247,247,1) 1%,rgba(241,241,241,1) 42%,rgba(242,242,242,1) 67%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
@@ -40,6 +40,7 @@
     margin:0;
     padding:0 0 0 20px;
     position:relative;
+    cursor: pointer;
 }
 .head .pull-right li.last{
     border:0;
@@ -47,8 +48,8 @@
 
 .head li i{
     position:absolute;
-    top:-1px;
-    left:2px
+    top:-3px;
+    left:0px
 }
 
 
@@ -71,18 +72,20 @@
 }
 
 
+
+
 .bc{
     background: #fff;
     display: block;
     padding: 0px 24px;
-    margin: 10px 0 0;
+    margin: 10px 0 15PX;
     line-height: 1em;
     font-size: 14px;
 }
 
 .bc span {
     margin:0 15px;
-    color:#EEE;
+    color:#CCC;
 }
 
 .bc img{
@@ -141,6 +144,7 @@
     margin-right:40px;
     padding:0;
     width:206px;
+    cursor:pointer;
 }
 
 .items .imgc{
@@ -268,7 +272,7 @@
 .sprite-walmartlogo{ background-position: 0 -1117px; width: 186px; height: 54px; }
 
 .footer {
-    position:relative; padding:60px 0px; margin:20px 0px;
+    position:relative; padding:60px 0px;
     background:#0e77bd ;
 }
 
@@ -390,18 +394,22 @@
 #productOverlay,
 #cartOverlay {
 
-    outline: 29999px solid rgba(0, 0, 0, .5);
     position: absolute;
-    top: 81px;
-    left: 270px;
+    top: 84px;
+    left: 269px;
     width: 710px;
     padding: 22px;
     height: auto;
     background: white;
-    border: 1px solid #666;
+    border: 1px solid #E8E8E8;
     display: none;
     z-index:999;
     margin-bottom:10px;
+    -moz-box-shadow:  -273px 0px 0px rgba(0, 0, 0, .5);
+    -webkit-box-shadow:  -273px 0px 0px rgba(0, 0, 0, .5);
+    box-shadow: -273px 0px 0px rgba(0, 0, 0, .5);
+    border-top: none;
+    border-right: none;
 
 }
 
@@ -413,8 +421,12 @@
 }
 
 #cartOverlay {
-    width:600px;
-    left:378px;
+    width:610px;
+    left:402px;
+    -moz-box-shadow:  -402px 0px 0px rgba(0, 0, 0, .5);
+    -webkit-box-shadow:  -402px 0px 0px rgba(0, 0, 0, .5);
+    box-shadow: -402px 0px 0px rgba(0, 0, 0, .5);
+    padding: 5px;
 
 }
 

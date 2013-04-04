@@ -1,57 +1,44 @@
 <html>
   <head>
-    <link rel="stylesheet" media="screen" href="styles/base.css"/>
-    <link rel="stylesheet" media="screen" href="styles/jquery-ui-1.10.1.min.css"/>
-    <link rel="stylesheet" media="screen" href="css/TVs/index.css"/>
-    <link rel="stylesheet" media="screen" href="css/common/navstyles.css"/>
+
+      <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+      <meta http-equiv="content-language" content="en"/>
+      <title>Sunitha's TV Finder</title>
+      <meta name="description" content=""/>
+
+       <link rel="stylesheet" media="screen" href="styles/base.css"/>
+       <link rel="stylesheet" media="screen" href="styles/jquery-ui-1.10.1.min.css"/>
+       <link rel="stylesheet" media="screen" href="css/TVs/index.css"/>
+       <link rel="stylesheet" media="screen" href="css/common/navstyles.css"/>
 
       <link rel="stylesheet" media="screen" href="../css/productoverlay/product.css"/>
       <link rel="stylesheet" media="screen" href="../css/productoverlay/carousel.css"/>
       <link rel="stylesheet" media="screen" href="../css/productoverlay/buttons.css"/>
       <link rel="stylesheet" media="screen" href="../css/productoverlay/reviews.css"/>
-
       <link rel="stylesheet" media="screen" href="../css/cartoverlay/cart.css"/>
+      <link rel="stylesheet" media="screen" href="../css/cartconfirm.css"/>
   </head>
   <body>
-  <div class="container-wide">
-  <header class="head clearfix">
-     <ul class="nav nav-pills pull-right">
-       <li><a><i class="sprite-create"></i><span >Create</span></a><div>a new wishlist</div> </li>
-       <li> <a> <i class="sprite-person"></i><span>Sign In</span></a> <div>to your account </div></li>
-       <li class="last"> <a> <i class="sprite-cart"></i><span>0 Items</span> </a> <div>in your cart  </div></li>
-     </ul>
-     <ul class="nav nav-pills pull-left">
-       <li><img alt="Walmart. Save Money. Live Better."  src="../images/wlogo.png"></li>
-       <li> <form name="search"><input type="search" placeholder="Search" class="text" name="search" /></form></li>
-     </ul>
-  </header>
-  <nav class="bc">
-     <a href="http://www.walmart.com/"><img src="./images/home.jpg"/></a>
-     <a href="http://www.walmart.com/cp/All-Departments/121828">Departments</a>
-      <span> > </span><a href="http://www.walmart.com/cp/Electronics/3944">Electronics</a>
-       <span> > </span><a class="last" href="http://www.walmart.com/cp/1060825">TV'S</a>
-  </nav>
-   <div class="hero" >
-      <h2>Get More, For Less</h2>
-      <p>Find the perfect Television with our new <span style="color:#0e79be;">TVFinder<sup>TM</sup></span></p>
-      <div> <div><img  class="first" alt="TV 18\"." src="./images/tv18withprice.jpg"> <img alt="TV 24\"."  class="second" src="./images/tv24withprice.jpg"">
-          <img alt="TV 46\"."  class="third" src="./images/tv46withprice.jpg"> </div>
-      </div>
-   </div>
-   <div class="filters clearfix">
 
-       <div class="pull-right">
+  <div class="container-wide ">
 
-       </div>
-       <div class="pull-left">
+      <header class="head clearfix">
+         <ul class="nav nav-pills pull-right">
+           <li><a><i class="sprite-create"></i><span >Create</span></a><div>a new wishlist</div> </li>
+           <li> <a> <i class="sprite-person"></i><span>Sign In</span></a> <div>to your account </div></li>
+           <li class="last" id="hCart"> <a> <i class="sprite-cart" ></i><span>0 Items</span> </a> <div>in your cart  </div></li>
+         </ul>
+         <ul class="nav nav-pills pull-left">
+           <li><a href="http://localhost:8000"><img alt="Walmart. Save Money. Live Better."  src="../images/wlogo.png"></a></li>
+           <li> <form name="search"><input type="search" placeholder="Search" class="text" name="search" /></form></li>
+         </ul>
+      </header>
 
-       </div>
 
-    </div>
-    <div class="summary">
+      <div class="page"> </div>
 
-   </div>
-      <div class="items"> </div>
+
+
       <footer class="footer">
       <div class="signup">
          <form name="email" method="get" action="#">
@@ -109,13 +96,10 @@
       <article class="col centre"><ul><li><a title="Walmart Money Centre" href="#">Walmart Money Centre</a></li><li><i class="sprite-footerimg"></i></li></ul></article>
       </section>
       </footer>
-      <div id="productOverlay">
 
-      </div>
+      <div id="productOverlay"> </div>
 
-      <div id="cartOverlay">
-
-      </div>
+      <div id="cartOverlay"></div>
 </div>
 </body>
 
@@ -124,22 +108,29 @@
   <script src="lib/handlebars.js"></script>
   <script src="lib/backbone.js"></script>
   <script src="lib/jquery-ui-1.10.1.min.js"></script>
+  <script src="lib/backbone.localStorage.js"></script>
   <script src="templates.js"></script>
   <script src="javascript/TVs/application.js"></script>
+  <script src="javascript/TVs/models/TVFBreadCrumbModel.js"></script>
+  <script src="javascript/TVs/models/CartBreadCrumbModel.js"></script>
   <script src="javascript/TVs/models/ProductModel.js"></script>
   <script src="javascript/TVs/collections/TVFinderCollection.js"></script>
-  <script src="javascript/TVs/views/TVFinderView.js"></script>
-  <script src="javascript/TVs/views/ItemsView.js"></script>
-  <script src="javascript/TVs/views/SliderView.js"></script>
-  <script src="javascript/TVs/views/FilterView.js"></script>
-  <script src="javascript/TVs/views/SummaryView.js"></script>
-  <script src="javascript/TVs/views/productDetailsView.js"></script>
+  <script src="javascript/TVs/views/TVF/TVFinderView.js"></script>
+  <script src="javascript/TVs/views/common/HeaderCartView.js"></script>
+  <script src="javascript/TVs/views/common/BreadCrumbView.js"></script>
+  <script src="javascript/TVs/views/TVF/POVView.js"></script>
+  <script src="javascript/TVs/views/TVF/ItemsView.js"></script>
+  <script src="javascript/TVs/views/TVF/SliderView.js"></script>
+  <script src="javascript/TVs/views/TVF/FilterView.js"></script>
+  <script src="javascript/TVs/views/TVF/SummaryView.js"></script>
+  <script src="javascript/TVs/views/product/productDetailsView.js"></script>
 
 
-  <script src="../lib/bootstrap.tabs.min.js"></script>
-  <script src="../javascript/product/wmCarousel.js"></script>
-  <script src="../javascript/product/reviews.js"></script>
+  <script src=" lib/bootstrap.tabs.min.js"></script>
+  <script src="javascript/product/wmCarousel.js"></script>
+  <script src="javascript/product/reviews.js"></script>
   <script src="javascript/TVs/views/product/AboutView.js"></script>
+  <script src="javascript/TVs/views/product/cartView.js"></script>
   <script src="javascript/TVs/views/product/DetailsView.js"></script>
   <script src="javascript/TVs/views/product/ImageCarouselView.js"></script>
   <script src="javascript/TVs/views/product/InfoView.js"></script>
@@ -148,8 +139,12 @@
 
   <script src="javascript/TVs/collections/CartItemCollection.js"></script>
   <script src="javascript/TVs/collections/SavedItemCollection.js"></script>
-  <script src="javascript/TVs/views/CartDetailsView.js"></script>
+  <script src="javascript/TVs/views/cart/CartDetailsView.js"></script>
+  <script src="javascript/TVs/views/cart/CartItemsView.js"></script>
+  <script src="javascript/TVs/views/cart/SaveItemsView.js"></script>
 
-
+  <script src="javascript/TVs/views/cart/CartConfirmView.js"></script>
+  <script src="javascript/TVs/views/cart/OrderDetailsView.js"></script>
+  <script src="javascript/TVs/router.js"></script>
 
 </html>

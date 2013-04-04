@@ -1,5 +1,0 @@
-    <link rel="stylesheet" media="screen" href="../css/product/product.css"/>
-    <link rel="stylesheet" media="screen" href="../css/product/carousel.css"/>
-    <link rel="stylesheet" media="screen" href="../css/product/buttons.css"/>
-    <link rel="stylesheet" media="screen" href="../css/product/items.css"/>
-    <link rel="stylesheet" media="screen" href="../css/product/reviews.css"/>

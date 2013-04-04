@@ -1,0 +1,15 @@
+<div class="selectstyle">
+    <select id ="qty">
+        <option value = "default">Qty</option>
+        <option value = "1">1</option>
+        <option value = "2">2</option>
+        <option value = "3">3</option>
+        <option value = "4">4</option>
+    </select>
+</div>
+{{#items}}
+<button class="btn cartbtn" id="{{genericContent.itemId}}">Add to Cart</button>
+{{/items}}
+<a><i class="find"></i><span>Find This Product Locally</span></a>
+<a><i class="arrival"></i><span>Calculate Arrival Date</span></a>
+<a><i class="share"></i><span>Share With a Friend</span></a>

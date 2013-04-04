@@ -1,0 +1,85 @@
+.order{
+    padding:15px;
+}
+
+.order .review {
+    border-top:2px solid #CCC;
+    margin-bottom:20px;
+    padding:10px;
+}
+
+.order .review .left{
+    font-size: 25px;
+    color: #555;
+    float: left;
+    margin-top: 17px;
+}
+
+.order .review .left span{
+    margin-left:15px;
+    font-weight:bold;
+}
+
+.order .review .left span.itms{
+    padding-right: 10px;
+    border-right: 2px solid #CCC;
+}
+
+.order .userdetails{
+    border-top:2px solid #CCC;
+    margin-bottom:40px;
+    padding:10px;
+
+
+}
+
+.order .userdetails .ttl{
+    font-size: 21px;
+    color:#7E7E7E;
+    margin-bottom:10px;
+}
+
+.order .userdetails .payment,
+.order .userdetails .shipping,
+.order .userdetails .delivery{
+    border-right:1px solid #CCC;
+    width:290px;
+    float:left;
+    margin-right: 10px;
+    padding: 10px;
+}
+.order .userdetails .delivery{
+    border-right: none;
+}
+
+.rbtn .co{
+    background: #FDB23B;
+}
+
+.order table tr{
+    width:100%;
+    border-bottom: 1px solid #CCC;
+}
+
+.order table .first{
+    width:70%;
+    border-right: 1px solid #CCC;
+}
+.order table .middle{
+    width:15%;
+}
+.order table .last{
+    width:15%;
+}
+.order td span{
+    margin-right:20px;
+}
+.order td div {
+    display: inline-block;
+}
+.order td .title{
+    white-space: nowrap;
+    width: 550px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

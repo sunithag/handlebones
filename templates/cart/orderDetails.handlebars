@@ -1,0 +1,79 @@
+<div class="review clearfix">
+    <div class="left">
+        Review your order:<span class="itms">{{items.length}} items </span> <span> ${{items.subtotal}} Total</span>
+    </div>
+    <div class="pull-right"> <span class="rbtn"><button class="btn co"><span>Confirm Order</span></button></span></div>
+</div>
+
+
+<div class="userdetails clearfix">
+    <div class="payment">
+        <div class="ttl">Payment Details</div>
+        <address>
+            <div class="type">Billing Address:</div>
+            <strong>Oliver Brooks</strong><br>
+            #543 1122 Lord Nelson Way,<br>
+            Victoria BC, V8P 5A5<br>
+            Canada
+        </address>
+    </div>
+    <div class="shipping">
+        <div class="ttl">Shipping</div>
+        <address>
+            <div class="type">Shipping Address:</div>
+            <strong>Oliver Brooks</strong><br>
+            #543 1122 Lord Nelson Way,<br>
+            Victoria BC, V8P 5A5<br>
+            Canada
+        </address>
+    </div>
+    <div class="delivery">
+        <div class="ttl">Delivery Date</div>
+        <br>
+        01/01/2012<br>
+        <br>Please Note:<br>
+        Non-Priority delivery estimates can vary +/- 4 days.
+
+    </div>
+</div>
+
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Your Order</th><th>Qty</th><th>Price</th><th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#items}}
+    <tr>
+        <td class="first">
+            <div class="imgc"><img src="{{attributes.alternateImageData.0.imageSrc}}" alt=""></div>
+            <div class="title">{{attributes.genericContent.itemName}}</div>
+        </td>
+        <td class="middle">{{attributes.qty}}</td>
+        <td class="last">${{attributes.sellers.0.baseSuggPrice}}</td>
+    </tr>
+    {{/items}}
+
+    </tbody>
+</table>
+<table class="table">
+<tr style="border:1px solid #DDD;width:100%;margin-top:10px;">
+    <td class="first">
+        <span>Subtotals</span>
+        <span>Items({{items.length}} ) ${{items.subtotal}}  </span>
+        <span> + </span>
+        <span>Shipping & Handling $64.95 </span>
+        <span> + </span>
+        <span>Taxes $175</span>
+    </td>
+    <td class="middle">Total</td>
+    <td class="last"> ${{items.total}}</td>
+</tr>
+</table>
+
+<div class="clearfix">
+<span class="rbtn"><button class="btn co"><span>Confirm Order</span></button></span>
+</div>

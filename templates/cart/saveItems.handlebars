@@ -1,0 +1,23 @@
+<details open>
+    <summary>{{items.length}} Saved Item</summary>
+    {{#items}}
+        <div class="clearfix">
+            <div class="imgc"><img src="{{attributes.alternateImageData.0.imageSrc}}" alt=""></div>
+            <div class="info">
+                <div class="title">
+                    {{attributes.genericContent.itemName}}
+                </div>
+                <button class="btn mtc" data-itemId="{{attributes.genericContent.itemId}}"><span>Move to Cart</span></button>
+                <button class="btn remove" data-itemId="{{attributes.genericContent.itemId}}"><span>Remove</span></button>
+            </div>
+            <div class="qty">
+                <legend>Quantity</legend>
+                <input type="text" size="1" maxlength="4" value="{{attributes.qty}}"  name="qty"/>
+            </div>
+            <div class="prc">
+                <div class="list">List Price: ${{attributes.sellers.0.baseSuggPrice}}</div>
+                <div class="orig">${{attributes.sellers.0.currentItemPrice}}</div>
+            </div>
+        </div>
+    {{/items}}
+</details>
