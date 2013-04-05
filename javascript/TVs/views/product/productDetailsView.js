@@ -18,12 +18,14 @@ Application.productDetailsView = Application.View.extend({
         // getting triggered for all the previously displayed views also, so check if it is a currentTarget so we don't add
         //the items that were removed from the cart.
         // http://stackoverflow.com/questions/7567404/backbone-js-repopulate-or-recreate-the-view
+        //I think creating singleton view will solve the issue or kill the views- I think first solution might be better.
         if(this.product.id === event.currentTarget.id){
             console.log("adding this item to the cart: " + this.product.id);
             //qty = $("#qty").val();
             //this.model = ({Qty: qty});
             this.product.setQty($("#qty").val());
             this.options.cartCollection.create(this.product.attributes[0]);
+            //TODO: create only one instance of this view - want to do this in local scope.
             var view = new Application.CartDetailsView({ template: Handlebars.templates['cart/cartPanel'], cartCollection: this.options.cartCollection, saveCollection:this.options.saveCollection});
             view.render();
             this.hidePanel();

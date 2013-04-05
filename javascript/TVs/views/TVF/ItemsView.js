@@ -17,6 +17,7 @@ Application.ItemsView = Application.View.extend({
 
 
         initialize : function(){
+
             this.collection.on('reset', this.render, this);
         },
 
@@ -34,7 +35,7 @@ Application.ItemsView = Application.View.extend({
             var href = $(target).attr('href');
             var itemid = href.substr(href.lastIndexOf('/')+1);
 
-
+           //TODO: create only one instance of the view
             var view = new Application.productDetailsView({ template: Handlebars.templates['product/productPanel'], id:itemid, cartCollection:this.options.cartCollection, saveCollection:this.options.saveCollection});
             view.render();
             view.showPanel();
